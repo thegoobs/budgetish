@@ -9,6 +9,31 @@
   </head>
 
   <body>
+  	<!-- Navbar -->
+  	<nav class="navbar">
+  		<!-- budgetish logo -->
+  		<div class="navbar-brand">
+  			<a class="navbar-item" hfref="#">
+  				Budget(ish)
+  			</a>
+
+  			<!-- Mobile murger menu -->
+		    <div class="navbar-burger burger" data-target="navMenu">
+		      <span></span>
+		      <span></span>
+		      <span></span>
+		    </div>
+  		</div>
+
+  		<!-- Menu items -->
+  		<div id="navMenu" class="navbar-menu">
+  			<div class="navbar-end">
+  				<div class="navbar-item">
+  					Sign In
+  				</div>
+  			</div>
+  		</div>
+  	</nav>
     <%= yield %>
   </body>
 </html>

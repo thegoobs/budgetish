@@ -19,3 +19,157 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 1374ms (Views: 1372.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:23:03 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:23:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:23:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:25:53 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:26:19 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:27:05 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:28:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:30:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:31:21 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 15.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:33:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:36:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:42:25 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:42:37 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:42:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 11.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 14:44:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 15:05:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 15:05:47 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 15:05:57 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 15:06:03 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 15:06:27 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9ms (Views: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:15:49 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:26:58 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.3ms)
+
+

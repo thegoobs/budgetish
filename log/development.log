@@ -173,3 +173,501 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 14ms (Views: 12.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:30:02 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:30:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.2ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20171016213308)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171016213308"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-16 21:33:51.601385"], ["updated_at", "2017-10-16 21:33:51.601385"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:34:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 212ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:45:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:45:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:45:49 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:46:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:49:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:50:16 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 782ms (Views: 780.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:50:30 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 809ms (Views: 805.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:50:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 788ms (Views: 784.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:50:59 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 770ms (Views: 768.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:52:28 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 775ms (Views: 773.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:52:37 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 816ms (Views: 812.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:52:43 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 793ms (Views: 789.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:52:49 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 808ms (Views: 803.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:53:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 786ms (Views: 784.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:53:23 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 801ms (Views: 797.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 796ms (Views: 793.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:35 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:42 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:54:58 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:55:07 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:58:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 877ms (Views: 875.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:58:47 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 805ms (Views: 803.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:01:06 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/layouts/application.html.erb:45: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/layouts/application.html.erb:43: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/layouts/application.html.erb:45: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:01:32 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:02:26 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:02:39 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:03:38 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:03:53 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 226ms (Views: 217.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:03:56 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 50ms (Views: 37.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:04:57 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/layouts/application.html.erb:37: syntax error, unexpected tLABEL, expecting ')'
+ new_user_session_path) class: 'nav-link' );@output_buffer.s
+                              ^):
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:05:03 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/layouts/application.html.erb:37: syntax error, unexpected ',', expecting ')'
+n In', new_user_session_path), class: 'nav-link' );@output_b
+                              ^):
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ',', expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:05:15 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/layouts/application.html.erb:37: syntax error, unexpected tLABEL, expecting ')'
+ new_user_session_path) class: 'nav-link' );@output_buffer.s
+                              ^):
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected tLABEL, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:05:28 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:06:01 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:06:52 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:06:54 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:07:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "@import 'Bulma'": expected selector or at-rule, was ".nav-link {"):
+    4:     <title>Budgetish</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:9
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1816399337247709973_70344509414020'
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:07:21 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 800ms (Views: 798.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:07:37 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:14:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /Users/guthrieschoolar/.rvm/gems/ruby-2.4.0/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:18:47 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 225ms (Views: 202.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:19:48 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-10-16 18:20:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:20:48 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:21:41 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:23:07 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:23:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:23:39 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:23:51 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-10-16 18:24:11 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+

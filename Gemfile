@@ -15,8 +15,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+
+# Minimalist framework
 gem "bulma-rails", "~> 0.5.3"
 
+# User gem
+gem 'devise'
 
 group :development, :test do
 

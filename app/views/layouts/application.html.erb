@@ -10,12 +10,10 @@
 
   <body>
   	<!-- Navbar -->
-  	<nav class="navbar">
+  	<nav class="navbar is-primary">
   		<!-- budgetish logo -->
   		<div class="navbar-brand">
-  			<a class="navbar-item" hfref="#">
-  				Budget(ish)
-  			</a>
+			<%= link_to("Budget(ish)", root_path, class: 'navbar-item') %>
 
   			<!-- Mobile murger menu -->
 		    <div class="navbar-burger burger" data-target="navMenu">
@@ -28,12 +26,23 @@
   		<!-- Menu items -->
   		<div id="navMenu" class="navbar-menu">
   			<div class="navbar-end">
-  				<div class="navbar-item">
-  					Sign In
-  				</div>
+  				<% if user_signed_in? %>
+	  				<div class="navbar-item">
+	  					<%= link_to('Sign Out', delete_user_session_path) %>
+	  				</div>
+	  			<% else %>
+	  				<div class="navbar-item">
+	  					<%= link_to('Sign In', new_user_session_path,  class: 'nav-link') %>
+	  				</div>
+	  				<div class="navbar-item">
+	  					<%= link_to('Sign Up', new_user_registration_path, class: 'nav-link') %>
+	  				</div>
+	  			<% end %>
   			</div>
   		</div>
   	</nav>
+
+    <!-- Rest of rails page -->
     <%= yield %>
   </body>
 </html>

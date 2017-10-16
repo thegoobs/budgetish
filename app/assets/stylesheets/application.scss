@@ -1,1 +1,11 @@
-@import 'Bulma'
+// Changes the breakpoint of mobile first design
+$desktop: 796px;
+
+//change the color of primary, defined in bulma
+$primary: #98D261;
+// Import bulma.scss
+@import 'Bulma';
+
+.nav-link {
+	color: white;
+}

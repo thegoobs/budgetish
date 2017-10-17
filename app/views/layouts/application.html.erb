@@ -42,6 +42,31 @@
   		</div>
   	</nav>
 
+
+    <!-- Flash messages -->
+    <% flash.each do |n, msg| %>
+    	<br>
+    	<!-- red alerts -->
+    	<% if n == "alert" %>
+      		<div class="notification is-warning has-text-centered">
+      			<button class="delete"></button>
+        		<%= content_tag :p, msg %>
+    		</div>
+    	<!-- green success alerts -->
+    	<% elsif n == "notice" %>
+      		<div class="notification is-primary has-text-centered">
+      			<button class="delete"></button>
+        		<%= content_tag :p, msg %>
+    		</div>
+    	<!-- "etc" color alerts -->
+    	<% elsif n == "notice" %>
+      		<div class="notification is-info has-text-centered">
+      			<button class="delete"></button>
+        		<%= content_tag :p, msg %>
+    		</div>
+      <% end %>
+    <% end %>
+
     <!-- Rest of rails page -->
     <%= yield %>
   </body>

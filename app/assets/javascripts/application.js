@@ -30,3 +30,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+//Bulma hide notification
+$(document).on('click', '.notification > button.delete', function() {
+    $(this).parent().animate({
+      top: '-20px',
+      opacity: '0'
+    }, 200, function() {
+      $(this).addClass('is-hidden');
+      return false;
+    })
+});

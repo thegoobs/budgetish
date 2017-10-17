@@ -1,3 +1,9 @@
+//= require jquery
+//= require jquery_ujs
+//= require rails-ujs
+//= require turbolinks
+//= require_tree .
+
 // BULMA NAVBAR HAMBURGER TOGGLE
 document.addEventListener('DOMContentLoaded', function () {
 

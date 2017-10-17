@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/f2b29d30d8.js"></script>
   </head>
 
   <body>
@@ -45,7 +46,6 @@
 
     <!-- Flash messages -->
     <% flash.each do |n, msg| %>
-    	<br>
     	<!-- red alerts -->
     	<% if n == "alert" %>
       		<div class="notification is-warning has-text-centered">

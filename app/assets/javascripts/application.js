@@ -37,7 +37,7 @@ $(document).on('click', '.notification > button.delete', function() {
       top: '-20px',
       opacity: '0'
     }, 200, function() {
-      $(this).addClass('is-hidden');
+      $(this).remove();
       return false;
     })
 });

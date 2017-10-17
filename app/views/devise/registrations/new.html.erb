@@ -1,6 +1,7 @@
 <div class="hero is-medium">
 	<div class="hero-body">
-		<h1 class="title has-text-centered">Create an Account</h1>
+		<h1 class="title has-text-centered">Budget(ish)</h1>
+		<h3 class="subtitle has-text-centered">Create an Account</h3>
 
 		<div class="container" style="max-width: 350px">
 			<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -15,7 +16,7 @@
 			  <%= f.label :password, class: 'label' %>
 			  <%= f.password_field :password, class: 'input', autocomplete: "off" %>
 			  <% if @minimum_password_length %>
-			  	<p class="help">(<%= @minimum_password_length %> characters minimum)</p>
+			  	<p class="help"><%= @minimum_password_length %> characters minimum</p>
 			  <% end %>
 			</div>
 

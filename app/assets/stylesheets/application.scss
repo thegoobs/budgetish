@@ -1,3 +1,6 @@
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 // Changes the breakpoint of mobile first design
 $desktop: 796px;
 
@@ -6,6 +9,9 @@ $primary: #98D261;
 // Import bulma.scss
 @import 'Bulma';
 
+body {
+	font-family: 'Nunito', sans-serif;
+}
 .nav-link {
 	color: white;
 }

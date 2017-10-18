@@ -16,6 +16,9 @@ body {
 	color: white;
 }
 
+.navbar-menu {
+	background-color: $primary;
+}
 .notification {
 	margin-top: 25px;
 }
@@ -26,5 +29,4 @@ body {
 
 label.label {
 	font-size: 12px;
-
 }

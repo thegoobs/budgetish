@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022004325) do
+ActiveRecord::Schema.define(version: 20171022224602) do
 
   create_table "budgets", force: :cascade do |t|
     t.datetime "start_time"
@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 20171022004325) do
     t.float "current_cash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "transaction_id"
+    t.index ["transaction_id"], name: "index_budgets_on_transaction_id"
+    t.index ["user_id"], name: "index_budgets_on_user_id"
   end
 
   create_table "transactions", force: :cascade do |t|
@@ -40,6 +44,8 @@ ActiveRecord::Schema.define(version: 20171022004325) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "budget_id"
+    t.index ["budget_id"], name: "index_users_on_budget_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

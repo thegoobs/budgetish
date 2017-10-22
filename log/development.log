@@ -6651,3 +6651,3039 @@ Processing by PagesController#dashboard as HTML
 Completed 200 OK in 332ms (Views: 322.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-21 19:46:34 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-21 19:46:42 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:03:11 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 28ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:03:11 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 390ms (Views: 388.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2017-10-22 16:12:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transactions"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/transactions/new" for 127.0.0.1 at 2017-10-22 16:14:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transactions/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/transaction/new" for 127.0.0.1 at 2017-10-22 16:14:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transaction/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/transactions/new" for 127.0.0.1 at 2017-10-22 16:14:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transactions/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:14:36 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:14:36 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2017-10-22 16:15:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transactions/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/transactions/new" for 127.0.0.1 at 2017-10-22 16:16:36 -0500
+Processing by TransactionsController#new as HTML
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2017-10-22 16:17:03 -0500
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XweQpJLZ7O01IynVoFNEizdZO7WXRudddKvEWgObLveE7rzMjHLAFYV+fW3Ihks4aRy0c56TRdYuB1gI0RYaJw==", "transaction"=>{"name"=>"Paid Guthrie", "amount"=>"50"}, "commit"=>"Save Transaction"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/transactions" for 127.0.0.1 at 2017-10-22 16:17:15 -0500
+Processing by TransactionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XweQpJLZ7O01IynVoFNEizdZO7WXRudddKvEWgObLveE7rzMjHLAFYV+fW3Ihks4aRy0c56TRdYuB1gI0RYaJw==", "transaction"=>{"name"=>"Paid Guthrie", "amount"=>"50"}, "commit"=>"Save Transaction"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:21:52 -0500
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/controllers/pages_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:22:01 -0500
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/controllers/pages_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/pages_controller.rb:13: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:22:41 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/pages_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:22:57 -0500
+Processing by PagesController#index as HTML
+Redirected to http://localhost:3000/budgets
+Completed 302 Found in 1ms
+
+
+Started GET "/budgets" for 127.0.0.1 at 2017-10-22 16:22:57 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BudgetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-10-22 16:23:04 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BudgetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-10-22 16:23:15 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BudgetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-10-22 16:23:17 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BudgetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets" for 127.0.0.1 at 2017-10-22 16:23:21 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for BudgetsController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:23:26 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/pages_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:24:00 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/pages_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:29:40 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/pages_controller.rb:10:in `index'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:30:07 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/pages_controller.rb:10:in `index'
+Started GET "/dashboard" for 127.0.0.1 at 2017-10-22 16:30:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:30:31 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2017-10-22 16:30:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/transactions/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budget/new" for 127.0.0.1 at 2017-10-22 16:30:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/budget/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:30:58 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:33:39 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:36:06 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:39:33 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:43:48 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:43:50 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:47:29 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:48:00 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:48:15 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:50:35 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_id):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:50:56 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 16:52:06 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:52:12 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 16:52:13 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kHmNsCZwfS3NrfR9tRqL7q7HOyctfAmlOHFBuM1F005LkKHYONtR1X3woMXdz4Rd8IK04SSpqy5i3d3qH8jnng=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:52:13 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:52:27 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:52:28 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:52:52 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-10-22 16:52:57 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sign_up" for 127.0.0.1 at 2017-10-22 16:53:02 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sign_up" for 127.0.0.1 at 2017-10-22 16:53:23 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 16:53:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"WnBhs+oTI8QtY/zv+uWSV5niI61OP/Rf9VASGv3X/BMPd0gN0o4n3d8WExwhcLBbUpUbIJShKjKrXZuDiMOR3g=="}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"WnBhs+oTI8QtY/zv+uWSV5niI61OP/Rf9VASGv3X/BMPd0gN0o4n3d8WExwhcLBbUpUbIJShKjKrXZuDiMOR3g=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-10-22 16:53:30 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:53:32 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-10-22 16:53:34 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2017-10-22 16:54:09 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LgklHec6gADEuBRTtUEyTl1grPPpsA/8UJxGvzzLjgQ9SC9/b4W0BhIYA5WlDLHcs7cysxZQpRgZq91wSvK69Q==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "aaa@aaa.com"], ["encrypted_password", "$2a$11$fCBxtQczfRDfbGYCLhNL6u.j.KFl5ZpNdnVsaOj.iB25Q6MsB/6By"], ["created_at", "2017-10-22 21:54:10.047428"], ["updated_at", "2017-10-22 21:54:10.047428"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-10-22 21:54:10.051542"], ["last_sign_in_at", "2017-10-22 21:54:10.051542"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-10-22 21:54:10.052005"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:54:10 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 16:54:17 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ydyIzzBQfsW8/pePgA+hOSl6pP9HiGs83c6cRWgc2Fp48Dy81nodXWe64rblbpia3n7Dy8z1fmKhCAQbRri2XQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:54:17 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:54:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 16:54:40 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X1SXYM9Fi3L91PP1t97H+lZu52ghT005PBOg2qaCm8Vuj3BmTifHRIgTA6vEm5QvAw4B3PhrXwp9IguUR8EjBQ==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 21:54:41.067250"], ["sign_in_count", 2], ["updated_at", "2017-10-22 21:54:41.067863"], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:54:41 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 16:54:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N/TteeW1q2gnSyAx7WuUXwDje5ofJMLqc+S9E2/CQryUEdPvIRogZnk/+YXKxnbmABxGYkg/EteU4XUBSv1S/A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:54:44 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:54:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 16:54:56 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ao9LPV9J/p3Y1fmqhVC+1z/64iTC1YDHLuT/A2ygsB5HQ/5WWmiYY0zYZMLH8nRMCQAlnGWCVJ5fqCpYgFGhPA==", "user"=>{"email"=>"guthrieschoolar95@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guthrieschoolar95@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 21:54:56.785438"], ["last_sign_in_at", "2017-10-21 23:44:30.799401"], ["sign_in_count", 16], ["updated_at", "2017-10-22 21:54:56.786014"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:54:56 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2017-10-22 16:55:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:55:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:55:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 16:55:50 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1Fzkmu0lKkWhLwzn4S//uI3yJJJlH34y5YqTO3SJ8rCR7vlcpyCwys+q9xfPHO6fhwiWnLx43ux0Z07x6euEfA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:55:50 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:56:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:56:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 16:56:28 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GRT4W79iuHy7Q8azUkZQlQTboL1scsgDd/HJ8K4FuFMODYKMuPw8+B8nL3NuZYksCctZRPrt6zFb8o3S5RC9Mg==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 21:56:29.053360"], ["last_sign_in_at", "2017-10-22 21:54:41.067250"], ["sign_in_count", 3], ["updated_at", "2017-10-22 21:56:29.053975"], ["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 141ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:56:29 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:56:36 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:56:36 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 16:56:45 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IDjiYqJqo9YHGC+U39DIZ+speI7xftc8kdLLfin6RgIJ7LkqvNfok++OAjDzP1LZiHl2xYhnBDqoNvYk782Ytg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:56:45 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 16:56:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 16:56:59 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SL4Qx4ksaj/AW7k6YYZexJxdKrgwRLIvCUn/0tPdlDFKbv2jtwJq/vUIY9TsLlsBgmCUi1IFyzwmrxF+AACNIA==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 21:56:59.863621"], ["last_sign_in_at", "2017-10-22 21:56:29.053360"], ["sign_in_count", 4], ["updated_at", "2017-10-22 21:56:59.864508"], ["id", 2]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 16:56:59 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:56:59 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:58:53 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 16:59:03 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:00:37 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/budget/new" for 127.0.0.1 at 2017-10-22 17:00:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/budget/new"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:00:57 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:01:31 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:03:00 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:03:23 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:32:44 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:33:15 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `Budget' for #<User:0x007f82d44206e0>
+Did you mean?  budget=):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:33:22 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:3:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:33:51 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/" for 127.0.0.1 at 2017-10-22 17:33:56 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:33:56 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:34:27 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:34:40 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+    20: 					<!-- This is where each spending category goes -->
+    21: 					<ul>
+    22: 						<li>placeholder for spending categories</li>
+    23: 						<li><%= current_user.budget %></li>
+    24: 						<li>placeholder</li>
+    25: 						<li>placeholder</li>
+    26: 						<li>placeholder</li>
+  
+app/views/pages/dashboard.html.erb:23:in `_app_views_pages_dashboard_html_erb__2642188960934285409_70099926553120'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:34:56 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:35:18 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (14.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `budget_id' for #<User:0x007f82d747ca00>
+Did you mean?  budget
+               budget=):
+    20: 					<!-- This is where each spending category goes -->
+    21: 					<ul>
+    22: 						<li>placeholder for spending categories</li>
+    23: 						<li><%= current_user.budget_id %></li>
+    24: 						<li>placeholder</li>
+    25: 						<li>placeholder</li>
+    26: 						<li>placeholder</li>
+  
+app/views/pages/dashboard.html.erb:23:in `_app_views_pages_dashboard_html_erb__2642188960934285409_70099959527880'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:35:33 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+    20: 					<!-- This is where each spending category goes -->
+    21: 					<ul>
+    22: 						<li>placeholder for spending categories</li>
+    23: 						<li><%= current_user.budget %></li>
+    24: 						<li>placeholder</li>
+    25: 						<li>placeholder</li>
+    26: 						<li>placeholder</li>
+  
+app/views/pages/dashboard.html.erb:23:in `_app_views_pages_dashboard_html_erb__2642188960934285409_70099916231520'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:35:38 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:36:53 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/pages/dashboard.html.erb:23: syntax error, unexpected ':', expecting ')'
+rent_user.budget.nil? "oops" : current_user.budget.name );@o
+                              ^):
+  
+app/views/pages/dashboard.html.erb:23: syntax error, unexpected ':', expecting ')'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:37:17 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.4ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+    20: 					<!-- This is where each spending category goes -->
+    21: 					<ul>
+    22: 						<li>placeholder for spending categories</li>
+    23: 						<li><%= current_user.budget.nil? "oops" | current_user.budget.name %></li>
+    24: 						<li>placeholder</li>
+    25: 						<li>placeholder</li>
+    26: 						<li>placeholder</li>
+  
+app/views/pages/dashboard.html.erb:23:in `_app_views_pages_dashboard_html_erb__2642188960934285409_70099960170480'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:37:28 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/pages/dashboard.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ current_user.budget == nil? "oops" | current_user.budget.na
+                              ^):
+  
+app/views/pages/dashboard.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:37:33 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/pages/dashboard.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ current_user.budget == nil? "oops" : current_user.budget.na
+                              ^
+/Users/guthrieschoolar/Documents/Rails/budgetish/app/views/pages/dashboard.html.erb:23: syntax error, unexpected ':', expecting ')'
+t_user.budget == nil? "oops" : current_user.budget.name );@o
+                              ^):
+  
+app/views/pages/dashboard.html.erb:23: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/pages/dashboard.html.erb:23: syntax error, unexpected ':', expecting ')'
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:37:43 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBudgetToUser (20171022224445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "budget_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_budget_id" ON "users" ("budget_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171022224445"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:45:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:45:09 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:45:32 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: budgets.user_id: SELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?):
+  
+app/controllers/budgets_controller.rb:4:in `new'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserToBudget (20171022224546)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "budgets" ADD "user_id" integer[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_user_id" ON "budgets" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171022224546"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddTransactionToBudget (20171022224602)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "budgets" ADD "transaction_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_budgets_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_budgets_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_transaction_id" ON "budgets" ("transaction_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171022224602"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_budgets_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_budgets_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:46:17 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 47ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:13:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:46:37 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 27ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:13:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:49:02 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:13:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/dashboard" for 127.0.0.1 at 2017-10-22 17:50:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-10-22 17:50:35 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:50:35 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 270ms (Views: 268.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:52:31 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:52:39 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:52:50 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:52:55 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:53:50 -0500
+  
+SyntaxError (/Users/guthrieschoolar/Documents/Rails/budgetish/app/controllers/pages_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+			redirect_to new_budget_path
+			                           ^
+/Users/guthrieschoolar/Documents/Rails/budgetish/app/controllers/pages_controller.rb:12: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/pages_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/controllers/pages_controller.rb:12: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:54:01 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 17:54:12 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 17:54:19 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rQ6HFu1dQ6mvXcay7dHOgeaJyhaQWNuXLAo4Hm4GSBMegj3KF9EZMZVoa58jdvLytF9ta8PetGMRp+O+IUwcXw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 17:54:19 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 17:54:21 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 17:54:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zjg3/qPA2E0EZhMxSxAPiw086fdhj2i/oiJNw7hvR3f/6/b0Ewbw1NIoL3GmAEyv6CqsrU4t1ECJo12V1/0Tlg==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 22:54:26.516023"], ["last_sign_in_at", "2017-10-22 21:56:59.863621"], ["sign_in_count", 5], ["updated_at", "2017-10-22 22:54:26.516600"], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 138ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 17:54:26 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/budgets/new
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:54:26 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:13:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:55:12 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 18ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:13:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:56:14 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 16ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:12:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:56:55 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:12:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:58:17 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 17ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:14:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 17:58:29 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:14:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:00:43 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:14:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:01:00 -0500
+Processing by BudgetsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: budget):
+  
+app/controllers/budgets_controller.rb:14:in `budget_params'
+app/controllers/budgets_controller.rb:4:in `new'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:01:04 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for @budget do |f| %>>
+    4:   <%= f.submit %>
+    5: <% end %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157894582760'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:01:56 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:03:45 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for @budget do |f| %>>
+    4:   <div class="field">
+    5:   	<%= form.label :starting_cash %>
+    6:   	<%= form.text_field :starting_cash %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157878554120'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:03:52 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for @budget do |form| %>>
+    4:   <div class="field">
+    5:   	<%= form.label :starting_cash %>
+    6:   	<%= form.text_field :starting_cash %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157901972440'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:04:13 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for @budget do |form| %>
+    4:   <div class="field">
+    5:   	<%= form.label :starting_cash %>
+    6:   	<%= form.text_field :starting_cash %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157895039820'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:05:39 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered budgets/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for current_user.budget do |form| %>
+    4:   <div class="field">
+    5:   	<%= form.label :starting_cash %>
+    6:   	<%= form.text_field :starting_cash %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157905834080'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:05:47 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>New Budget Landing Page</h1>
+    2: 
+    3: <%= form_for @budget do |form| %>
+    4:   <div class="field">
+    5:   	<%= form.label :starting_cash %>
+    6:   	<%= form.text_field :starting_cash %>
+  
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157879002920'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:06:24 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (191.3ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x007f9dd0febdf0>:0x007f9dd0fea158>):
+     6:   	<%= form.text_field :starting_cash %>
+     7: 
+     8:   </div>
+     9:   <%= f.submit %>
+    10: <% end %>
+  
+app/views/budgets/new.html.erb:9:in `block in _app_views_budgets_new_html_erb__2014769706698490400_70157896483680'
+app/views/budgets/new.html.erb:3:in `_app_views_budgets_new_html_erb__2014769706698490400_70157896483680'
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:06:36 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:06:55 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:07:05 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `create' for nil:NilClass):
+  
+app/controllers/budgets_controller.rb:9:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:11:35 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/budgets_controller.rb:8:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:11:52 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `create' for nil:NilClass):
+  
+app/controllers/budgets_controller.rb:9:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:12:58 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "budgets" ("starting_cash", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["starting_cash", 500.0], ["created_at", "2017-10-22 23:12:58.592921"], ["updated_at", "2017-10-22 23:12:58.592921"], ["user_id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 112ms (ActiveRecord: 3.3ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:13:03 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotSaved (Failed to remove the existing associated budget. The record failed to save after its foreign key was set to nil.):
+  
+app/controllers/budgets_controller.rb:10:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:13:39 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkZLt9wUSIA4xseBk1P4j/2NbxWIkUGnww+Vq5dzdwTO+Om1znNXxsvXukeMbVx8rqxjdnAr5ycPmDT4BE1Y8A==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:13:43 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:13:47 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hqH5izzoO+sZ2lKrC5nP/OmYjt/2eym8beqadjQj4K8+H1uJLo8krerLL20Up2sPurmCvA7BjzyhfTslpx3PWw==", "budget"=>{"starting_cash"=>"500"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 86ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:13:53 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:13:55 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:13:55 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:14:19 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:14:29 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:14:34 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:15:00 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:16:31 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:16:37 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:17:04 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:17:15 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:17:15 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:17:17 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:17:17 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:17:21 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:17:21 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:17:50 -0500
+Processing by PagesController#dashboard as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 60ms (Views: 32.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 18:18:03 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+eFTpwALBLwF7/w8jYNIeR9AiAmhqCr44cpLneW0E8tBX/GlEmwb+vb+gfqSveyKTGGEalkSjHgtXerOdoo8Pw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:18:03 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 18:18:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 18:18:10 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cl9LxUm4nQiuxwqmOUtO3pEXizv3ibNQDWR61hbib23AFSlWBaigERxSgQqdWQRHGTdc222VT2o6xIbo1mABjQ==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 23:18:10.595874"], ["last_sign_in_at", "2017-10-22 22:54:26.516023"], ["sign_in_count", 6], ["updated_at", "2017-10-22 23:18:10.596401"], ["id", 2]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:18:10 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:18:10 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:18:27 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 18:18:33 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wCvx2pqbgetkHZJiv6qyFbc/ybuE6kdf2XMWIiIUXRKNUi5QB7xYvNc//K6YSnAfGCjmdlO62zepMF6W8DtoaQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:18:33 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 18:18:35 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 18:18:40 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CVZFnaQUUHu0Jpdbr3+tk0p+55Lard/qbI7BhJ7kROW7PV0WqzO+2Hwmc434Sv+lnVjGFHuGV8P6ivvDa7anxw==", "user"=>{"email"=>"guthrieschoolar95@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "guthrieschoolar95@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 23:18:40.362023"], ["last_sign_in_at", "2017-10-22 21:54:56.785438"], ["sign_in_count", 17], ["updated_at", "2017-10-22 23:18:40.362670"], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:18:40 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/budgets/new
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:18:40 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:18:46 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UbQ+M6P4sV8oK8GpHqg6HZ/yxdB86w16Vo5UMgnnLY4ZvSqdw2Uhc6+7E+yVU6kuL6JTk/SaUK4FR/dmkvLDBw==", "budget"=>{"starting_cash"=>"1000"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `create' for nil:NilClass):
+  
+app/controllers/budgets_controller.rb:9:in `create'
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:19:34 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UbQ+M6P4sV8oK8GpHqg6HZ/yxdB86w16Vo5UMgnnLY4ZvSqdw2Uhc6+7E+yVU6kuL6JTk/SaUK4FR/dmkvLDBw==", "budget"=>{"starting_cash"=>"1000"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:19:38 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UbQ+M6P4sV8oK8GpHqg6HZ/yxdB86w16Vo5UMgnnLY4ZvSqdw2Uhc6+7E+yVU6kuL6JTk/SaUK4FR/dmkvLDBw==", "budget"=>{"starting_cash"=>"1000"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 82ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:19:41 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/budgets/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:19:41 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:19:43 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/budgets/new
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:19:43 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:19:52 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:19:56 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W7hHXEEi8+6z/ZAHgLp2HWAoRM1yVhRrO3zmnq4adrUTsVPyIb9jwjRtQkILQeUu0HjSjvonSb9otUXKNQ+YPA==", "budget"=>{"starting_cash"=>"1000"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mBudget Load (0.3ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "budgets" ("starting_cash", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["starting_cash", 1000.0], ["created_at", "2017-10-22 23:19:56.278140"], ["updated_at", "2017-10-22 23:19:56.278140"], ["user_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for BudgetsController#create, rendering head :no_content
+Completed 204 No Content in 90ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:19:58 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:19:58 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:20:22 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 18:20:24 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Fo3mWzdItkwZnHmFo20+6Tnsd6oLsNkbW/Eo3tltmHJehPL1V9UmYJ4Mq8Aolq3aibzh6YPBhM8IOIuKQnh2+w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:20:24 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 18:20:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 18:20:30 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eD2nxFDIkvwczQT7QNOclJpLDxBnlBRzmZKCmxXpqlkRc1LwS5kRshXqs7kIbpbNbq1n8yytKDKtT/2SZnKpSA==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 23:20:30.278373"], ["last_sign_in_at", "2017-10-22 23:18:10.595874"], ["sign_in_count", 7], ["updated_at", "2017-10-22 23:20:30.279104"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:20:30 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:20:30 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 18:20:34 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rqMtDuIBVM8ifo6HIMJpYhrTVUU0OLivBBIRUa+X1YJJsB78+Et1t6QC2d9x840Laqb6OgnOlmep0aJbqjkkTg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:20:34 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:21:51 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:21:54 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 18:21:55 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 18:22:01 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vxxOGzG891r+YqUQUVXJNq1u3XINf5RX4PvPWAZ6KsPQO7mWI42ebMrznkzYd0X6TpgcR6TFU7oU4I8IA0YxFA==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-22 23:22:01.229758"], ["last_sign_in_at", "2017-10-22 23:20:30.278373"], ["sign_in_count", 8], ["updated_at", "2017-10-22 23:22:01.230370"], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:22:01 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:22:01 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:22:07 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  Rendered pages/dashboard.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:22:33 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:22:43 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/sign_out" for 127.0.0.1 at 2017-10-22 18:24:47 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Cglq1u1EieLfMtEA6NcgpE6DQJZBIE7EncEq5qBTykvipQ4LH/8wt57PL683JQYsUNAsliDlpvYBU1C/hLyXdA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:24:48 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start_time" datetime, "starting_cash" float, "current_cash" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "transaction_id" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_transaction_id" ON "budgets" ("transaction_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_user_id" ON "budgets" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "amount" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "budget_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_users_on_budget_id" ON "users" ("budget_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171022224602)[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171016213308),
+(20171018204622),
+(20171022004325),
+(20171022224445),
+(20171022224546);
+
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-22 23:27:15.983330"], ["updated_at", "2017-10-22 23:27:15.983330"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "budgets"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "budgets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "start_time" datetime, "starting_cash" float, "current_cash" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "transaction_id" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_transaction_id" ON "budgets" ("transaction_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_budgets_on_transaction_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_budgets_on_user_id" ON "budgets" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions"[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "amount" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "budget_id" integer)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX "index_users_on_budget_id" ON "users" ("budget_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_budget_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171022224602)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171016213308),
+(20171018204622),
+(20171022004325),
+(20171022224445),
+(20171022224546);
+
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-22 23:27:16.008043"], ["updated_at", "2017-10-22 23:27:16.008043"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:27:29 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 230ms (Views: 217.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_in" for 127.0.0.1 at 2017-10-22 18:27:31 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 51ms (Views: 34.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2017-10-22 18:27:36 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vup2dYYbLMYP96DbMbIptpeQ2zLRUY0qXTOAXyA5CYvIkkGB7zzRLe94OpLeIDfj+BmrwT9w6BPEFsJAmquHUQ==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vup2dYYbLMYP96DbMbIptpeQ2zLRUY0qXTOAXyA5CYvIkkGB7zzRLe94OpLeIDfj+BmrwT9w6BPEFsJAmquHUQ==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 148ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-10-22 18:27:39 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2017-10-22 18:27:50 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wTiQNBZo/gIYBr/2Np0k8ADXwpUk4WxLlQrdW7TvYz18K/vnCRq7WX6xyNQiVaMie85j3ZDKDWLTcrPiJ3WL+A==", "user"=>{"email"=>"aaa@aaa.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaa@aaa.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "aaa@aaa.com"], ["encrypted_password", "$2a$11$greYXigm5VAN9PPVXYWssOHUNWK.osstXDxJrTHeOgTSN9S3TYXGS"], ["created_at", "2017-10-22 23:27:50.426673"], ["updated_at", "2017-10-22 23:27:50.426673"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-10-22 23:27:50.431182"], ["last_sign_in_at", "2017-10-22 23:27:50.431182"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-10-22 23:27:50.431728"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 153ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-22 18:27:50 -0500
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/budgets/new
+Completed 302 Found in 11ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/budgets/new" for 127.0.0.1 at 2017-10-22 18:27:50 -0500
+Processing by BudgetsController#new as HTML
+  Rendering budgets/new.html.erb within layouts/application
+  Rendered budgets/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/budgets" for 127.0.0.1 at 2017-10-22 18:28:03 -0500
+Processing by BudgetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0uZGl+qOwGVMrSgvVrKyUgYpTV9aLl7xyNfzfzjKIVUwVcSXoRC9SgZb+LETRQB7OB8oBaLM6AdULeBIQSbqJQ==", "budget"=>{"starting_cash"=>"10000"}, "commit"=>"Create Budget"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mBudget Load (0.2ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "budgets" ("starting_cash", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["starting_cash", 10000.0], ["created_at", "2017-10-22 23:28:03.041319"], ["updated_at", "2017-10-22 23:28:03.041319"], ["user_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/pages/dashboard
+Completed 302 Found in 17ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/pages/dashboard" for 127.0.0.1 at 2017-10-22 18:28:03 -0500
+Processing by PagesController#dashboard as HTML
+  Rendering pages/dashboard.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBudget Load (0.1ms)[0m  [1m[34mSELECT  "budgets".* FROM "budgets" WHERE "budgets"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered pages/dashboard.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+

@@ -6,7 +6,9 @@
 				<div class="column is-two-thirds has-text-centered">
 					<h1 class="title is-marginless">You have</h1>
 					<p class="jumbo">$</p>
-					<span class="jumbo" id="total_cash">0</span>
+					<span class="jumbo" id="total_cash">
+						<%= current_user.budget.starting_cash %>
+					</span>
 					<div class="columns has-text-centered">
 						<div class="column">
 							<%= button_to "I Got Paid!", root_url, class: 'button' %>
@@ -35,7 +37,7 @@
 
 <script>
 	//countUp.js, makes the total_cash span increment up in a nice way
-	var numAnim = new CountUp("total_cash", 0, 100);
+	var numAnim = new CountUp("total_cash", 0, $("#total_cash").text());
 	if (!numAnim.error) {
 	    numAnim.start();
 	}

@@ -23,10 +23,21 @@ body {
 	margin-top: 25px;
 }
 
-.outline {
+.border {
 	border: 1px solid red;
 }
 
 label.label {
 	font-size: 12px;
+}
+
+
+.jumbo {
+	display: inline-block;
+	font-size: 5em;
+	margin: 0;
+}
+
+.hero-body {
+	margin-top: -400px;
 }

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171016213308) do
+ActiveRecord::Schema.define(version: 20171022004325) do
+
+  create_table "budgets", force: :cascade do |t|
+    t.datetime "start_time"
+    t.float "starting_cash"
+    t.float "current_cash"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.text "name"
+    t.float "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

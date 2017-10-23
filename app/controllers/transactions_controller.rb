@@ -1,15 +1,16 @@
 class TransactionsController < ApplicationController
 	def new
-		@budget = Budget.find(params[:budget_id])
-		@transaction = @budget.transactions.create(transaction_params)
+		@budget = current_user.budget
 	end
 
 	def create
-		render plain: params[:transaction].inspect
+		@budget = current_user.budget
+		@transaction = @budget.transactions.create(transaction_params)
+		redirect_to pages_dashboard_path
 	end
 
 	private
 		def transaction_params
-			params.require(:transation).permit(:name, :amount)
+			params.require(:transaction).permit(:name, :amount)
 		end
 end

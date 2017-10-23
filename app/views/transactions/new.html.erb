@@ -1,6 +1,6 @@
 <h1>New Transaction</h1>
 
-<%= form_with scope: :transaction, url: transactions_path, local: true do |form| %>
+<%= form_with(model: [ @budget, @budget.transactions.build ], local: true) do |form|%>
 	<%= form.label :name %>
 	<%= form.text_field :name %>
 

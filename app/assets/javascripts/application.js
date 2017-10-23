@@ -41,3 +41,10 @@ $(document).on('click', '.notification > button.delete', function() {
       return false;
     })
 });
+
+//load transaction form
+function loadForm() {
+  $("#form-content").each(function() {
+    
+  });
+}

@@ -9,4 +9,8 @@ class PagesController < ApplicationController
 			end
 		end
 	end
+
+	def dashboard
+		current_user.budget.current_cash = current_user.budget.starting_cash + current_user.budget.transactions.sum(:amount)
+	end
 end

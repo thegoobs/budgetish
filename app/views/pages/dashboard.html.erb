@@ -7,11 +7,11 @@
 					<h1 class="title is-marginless">You have</h1>
 					<p class="jumbo">$</p>
 					<span class="jumbo" id="total_cash">
-						<%= current_user.budget.starting_cash %>
+						<%= current_user.budget.current_cash %>
 					</span>
 					<div class="columns has-text-centered">
 						<div class="column">
-							<%= button_to "I Got Paid!", root_url, class: 'button' %>
+							<%= link_to "I Got Paid", new_budget_transaction_path(current_user, current_user.budget), class: "button" %>
 						</div>
 						<div class="column">
 							<%= button_to "I Bought Something", root_url, class: 'button' %>
@@ -21,13 +21,9 @@
 				<div class="column">
 					<!-- This is where each spending category goes -->
 					<ul>
-						<li>placeholder for spending categories</li>
-						<li>placeholder</li>
-						<li>placeholder</li>
-						<li>placeholder</li>
-						<li>placeholder</li>
-						<li>placeholder</li>
-						<li>placeholder</li>
+						<% current_user.budget.transactions.each do |list| %>
+							<li><%= list.name %><%= list.amount %></li>
+						<% end %>
 					</ul>
 				</div>
 			</div>

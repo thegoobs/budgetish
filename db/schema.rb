@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022224602) do
+ActiveRecord::Schema.define(version: 20171023183727) do
 
   create_table "budgets", force: :cascade do |t|
     t.datetime "start_time"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20171022224602) do
     t.float "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "budget_id"
   end
 
   create_table "users", force: :cascade do |t|

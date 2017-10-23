@@ -7,6 +7,8 @@ class BudgetsController < ApplicationController
 	def create
 		@user = current_user
 		@budget = Budget.create(budget_params)
+		@budget.start_time = Time.now
+		@budget.current_cash = @budget.starting_cash
 		@user.budget = @budget
 		redirect_to pages_dashboard_path
 	end

@@ -1,0 +1,11 @@
+I"Ì(function() {
+  $(function() {
+    return $("a[data-remote]").on("ajax:success", function(e, data, status, xhr) {
+      return alert("what");
+    });
+  });
+
+  $('#modal-holder').dialog();
+
+}).call(this);
+:ET

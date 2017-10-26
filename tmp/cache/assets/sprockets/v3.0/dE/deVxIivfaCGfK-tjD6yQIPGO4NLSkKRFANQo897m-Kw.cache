@@ -1,0 +1,9 @@
+I"À(function() {
+  $(function() {
+    return $("a[data-remote]").on("ajax:success", function(e, data, status, xhr) {
+      return alert("The article was deleted.");
+    });
+  });
+
+}).call(this);
+:ET

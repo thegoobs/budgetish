@@ -1,0 +1,9 @@
+I"ª(function() {
+  $(function() {
+    return $("a[data-remote]").on("ajax:success", function(e, data, status, xhr) {
+      return alert(data);
+    });
+  });
+
+}).call(this);
+:ET

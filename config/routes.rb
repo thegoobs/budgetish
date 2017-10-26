@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get 'pages/dashboard'
+  get "transactions/new" => 'transactions#new', :as => :new_transaction
+
 end

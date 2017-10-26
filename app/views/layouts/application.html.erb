@@ -35,7 +35,7 @@
 	  				</div>
 	  			<% else %>
 	  				<div class="navbar-item">
-	  					<%= link_to('Sign In', new_user_session_path,  class: 'nav-link') %>
+	  					<%= link_to('Sign In', new_user_session_path, class: 'nav-link') %>
 	  				</div>
 	  				<div class="navbar-item">
 	  					<%= link_to('Sign Up', new_user_registration_path, class: 'nav-link') %>
@@ -70,9 +70,6 @@
         <% end %>
       <% end %>
     </div>
-
-    <!-- Modal container -->
-    <div id="modal-holder"></div>
 
     <!-- Rest of rails page -->
     <%= yield %>

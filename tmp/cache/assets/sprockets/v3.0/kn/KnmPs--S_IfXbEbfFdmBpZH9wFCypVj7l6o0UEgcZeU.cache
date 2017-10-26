@@ -1,0 +1,9 @@
+I"Ü(function() {
+  $(function() {
+    $("a[data-remote]").on("ajax:success", function(e, data, status, xhr) {});
+    $("#modal-holder").append("<p>worker</p>");
+    return $("#modal-holder").dialog();
+  });
+
+}).call(this);
+:ET

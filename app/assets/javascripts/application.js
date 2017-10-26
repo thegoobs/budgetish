@@ -1,5 +1,5 @@
 //= require jquery
-//= require jquery_ujs
+//= require jquery-ui
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         // Toggle the class on both the "navbar-burger" and the "navbar-menu"
         $el.classList.toggle('is-active');
         $target.classList.toggle('is-active');
-
       });
     });
   }
@@ -41,10 +40,3 @@ $(document).on('click', '.notification > button.delete', function() {
       return false;
     })
 });
-
-//load transaction form
-function loadForm() {
-  $("#form-content").each(function() {
-    
-  });
-}

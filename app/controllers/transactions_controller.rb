@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
 	def new
 		@budget = current_user.budget
+		respond_to :js, :html
 	end
 
 	def create

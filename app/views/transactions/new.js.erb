@@ -1,0 +1,4 @@
+$('#modal-holder').html("<%= escape_javascript(render 'transactions/new') %>");
+$('#modal-holder').dialog({
+	dialogClass: 'popup'
+});

@@ -1,3 +1,7 @@
+/*
+ *= require jquery-ui
+ */
+
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -36,4 +40,10 @@ label.label {
 	display: inline-block;
 	font-size: 5em;
 	margin: 0;
+}
+
+.popup .ui-widget-header {
+	background-color: $primary;
+	color: white;
+	font-size: 22px;
 }

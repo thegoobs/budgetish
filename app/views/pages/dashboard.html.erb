@@ -1,3 +1,9 @@
+<!-- Modal container -->
+<div id="modal-holder" title="New Transaction" style="display: none">
+	<h1>Content</h1>
+</div>
+
+<!-- content -->
 <div class="hero is-fullheight">
 	<div class="hero-body">
 		<div class="container">
@@ -11,10 +17,10 @@
 					</span>
 					<div class="columns has-text-centered">
 						<div class="column">
-							<%= link_to "I Got Paid", new_budget_transaction_path(current_user, current_user.budget), class: "button" %>
+							<%= link_to "I Got Paid", new_budget_transaction_path(current_user), {class: "button", :remote=> true} %>
 						</div>
 						<div class="column">
-							<%= button_to "I Bought Something", root_url, class: 'button' %>
+							<%= link_to "I Bought Something!", new_budget_transaction_path(current_user), {class: "button", :remote=> true} %>
 						</div>
 					</div>
 				</div>

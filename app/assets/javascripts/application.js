@@ -40,3 +40,7 @@ $(document).on('click', '.notification > button.delete', function() {
       return false;
     })
 });
+
+function loadSquirrel() {
+  alert("heyhey");
+}

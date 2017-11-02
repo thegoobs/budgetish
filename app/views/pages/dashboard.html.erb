@@ -26,8 +26,13 @@
 				<div class="column">
 					<!-- This is where each spending category goes -->
 					<ul>
-						<% current_user.budget.transactions.each do |list| %>
-							<li><%= list.name %><%= list.amount %></li>
+						<% current_user.budget.categories.each do |list| %>
+							<li><%= list.name %><%= list.id %></li>
+							<% current_user.budget.transactions.each do |cat| %>
+								<% if cat.category_id == list.id %>
+									<li><%= cat.name %><%= cat.amount %></li>
+								<% end %>
+							<% end %>
 						<% end %>
 					</ul>
 				</div>

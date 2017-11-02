@@ -15,6 +15,6 @@ class BudgetsController < ApplicationController
 
 	private
 		def budget_params
-			params.require(:budget).permit(:start_time, :starting_cash, :current_cash, :created_at, :updated_at, :user_id, :transaction_id)
+			params.require(:budget).permit(:id, :start_time, :starting_cash, :current_cash, :user_id, :transaction_id, categories_attributes:[:id, :name, :amount, :_destroy])
 		end
 end

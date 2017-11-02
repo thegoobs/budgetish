@@ -1,8 +1,10 @@
 //= require jquery
 //= require jquery-ui
 //= require rails-ujs
+//= require nested_form_fields
 //= require turbolinks
 //= require_tree .
+
 
 // BULMA NAVBAR HAMBURGER TOGGLE
 document.addEventListener('DOMContentLoaded', function () {
@@ -40,7 +42,3 @@ $(document).on('click', '.notification > button.delete', function() {
       return false;
     })
 });
-
-function loadSquirrel() {
-  alert("heyhey");
-}

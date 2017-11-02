@@ -1,0 +1,25 @@
+<%= form_for @budget do |form| %>
+  <div class="field">
+  	<%= form.label :starting_cash %>
+  	<span>$</span>
+  	<%= form.text_field :starting_cash %>
+
+  </div>
+
+  <div class="field">
+  	<h1>Categories</h1>
+  	<%= form.nested_fields_for :categories do |c| %>
+  		<%= c.label :name, class: 'label' %>
+  		<div class="control">
+	  		<%= c.text_field :name %>
+
+	  		<%= c.label :amount, class: 'label' %>
+	  		<%= c.text_field :amount %>
+        <%= c.remove_nested_fields_link %>
+	  	</div>
+  	<% end %>
+  	<%= form.add_nested_fields_link :categories %>
+  </div>
+
+  <%= form.submit %>
+<% end %>

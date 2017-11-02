@@ -22,7 +22,7 @@ gem "bulma-rails", "~> 0.5.3"
 
 # User gem
 gem 'devise'
-
+gem 'nested_form_fields', '~> 0.8.2'
 group :development, :test do
 
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

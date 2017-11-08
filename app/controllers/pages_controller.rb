@@ -11,6 +11,7 @@ class PagesController < ApplicationController
 	end
 
 	def dashboard
+		@transactions = current_user.budget.transactions
 		current_user.budget.current_cash = current_user.budget.starting_cash + current_user.budget.transactions.sum(:amount)
 	end
 end

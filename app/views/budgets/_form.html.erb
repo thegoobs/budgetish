@@ -1,25 +1,42 @@
-<%= form_for @budget do |form| %>
-  <div class="field">
-  	<%= form.label :starting_cash %>
-  	<span>$</span>
-  	<%= form.text_field :starting_cash %>
-
+<%= form_with(model: budget, local: true) do |form| %>
+  <div class="field" id="starting_cash">
+  	<h1 class="label">How much money do you have outside of savings?</h1> 
+    <p class="control has-icons-left">
+  	 <%= form.text_field :starting_cash, id:'starting_cash_field',class: 'input', autocomplete: :off %>
+     <span class="icon is-small-left">
+      <i class="fa fa-dollar"></i>
+     </span>
+    </p>
+    <br>
+    <div class="button" onClick="next_step('fixed_payments')">Next</div>
   </div>
-
-  <div class="field">
-  	<h1>Categories</h1>
+  
+  <div class="field" id="fixed_payments">
+  	<h1>Payments</h1>
   	<%= form.nested_fields_for :categories do |c| %>
-  		<%= c.label :name, class: 'label' %>
-  		<div class="control">
-	  		<%= c.text_field :name %>
-
-	  		<%= c.label :amount, class: 'label' %>
-	  		<%= c.text_field :amount %>
-        <%= c.remove_nested_fields_link %>
-	  	</div>
+  		<%= render 'category_fields', :f => c %>
   	<% end %>
-  	<%= form.add_nested_fields_link :categories %>
+
+    <div onClick="category_clear()">
+    	<%= form.add_nested_fields_link :categories, 'Other' %>
+    </div>
+    <br>
+    <div class="button" onClick="next_step('flex_payments')">Next</div>
   </div>
 
-  <%= form.submit %>
+  <div class="field" id="flex_payments">
+    <h1>Extra Spending Money</h1>
+    <%= form.nested_fields_for :categories do |c| %>
+      <%= render 'flex_category_fields', :f => c %>
+    <% end %>
+  </div>
+  <div class="field" id="flex_payments_add" onClick="category_clear()">
+    <%= form.add_nested_fields_link :categories, 'Other', data: {insert_into: 'flex_payments'} %>
+
+    <br>
+    <%= form.submit class: 'button', onClick:'fixed_fix()' %>
+  </div>
+
+  <div class="field" id="rank_flex_payments">
+  </div>
 <% end %>

@@ -1,9 +1,11 @@
 //= require jquery
 //= require jquery-ui
 //= require rails-ujs
-//= require nested_form_fields
 //= require turbolinks
 //= require_tree .
+//= require budget_form
+//= require nested_form_fields
+
 
 
 // BULMA NAVBAR HAMBURGER TOGGLE

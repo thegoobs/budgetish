@@ -2,6 +2,8 @@
  *= require jquery-ui
  */
 
+//other stylesheets
+@import 'budgets.scss';
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -10,12 +12,19 @@ $desktop: 796px;
 
 //change the color of primary, defined in bulma
 $primary: #98D261;
+
+$dark-primary: #66a346;
+
 // Import bulma.scss
 @import 'Bulma';
 
 body {
 	font-family: 'Nunito', sans-serif;
 }
+.navbar {
+	height: 75px;
+}
+
 .nav-link {
 	color: white;
 }
@@ -23,6 +32,7 @@ body {
 .navbar-menu {
 	background-color: $primary;
 }
+
 .notification {
 	margin-top: 25px;
 }
@@ -48,8 +58,27 @@ label.label {
 	font-size: 22px;
 }
 
-.squirrel {
-	margin: 100px;
-	position: relative;
-	top: -200px;
+.dash-title {
+	font-size: 24px;
+}
+
+.dash-button {
+	width: 75%;
+	border: 2px solid $primary;
+	text-transform: uppercase;
+}
+
+.spending-title {
+	background-color: $dark-primary;
+	font-size: 20px;
+	color: white;
+	padding: 12px;
+}
+
+.category {
+	border: 1px solid gray;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }

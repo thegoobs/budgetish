@@ -6,31 +6,58 @@
 <div class="hero is-fullheight">
 	<div class="hero-body">
 		<div class="container">
-			<h1 class="title has-text-centered">Your Personal Budget</h1>
 			<div class="columns">
 				<div class="column is-two-thirds has-text-centered">
-					<h1 class="title is-marginless">You have</h1>
+					<h1 class="title dash-title is-marginless">You have</h1>
 					<p class="jumbo">$</p>
 					<span class="jumbo" id="total_cash">
 						<%= current_user.budget.current_cash %>
 					</span>
-					<div class="columns has-text-centered">
-						<div class="column">
-							<%= link_to "I Got Paid", new_budget_transaction_path(current_user), {class: "button", :remote=> true} %>
-						</div>
-						<div class="column">
-							<%= link_to "I Bought Something!!!", new_budget_transaction_path(current_user), {class: "button", :remote=> true} %>
-						</div>
+					<h1 class="title dash-title">in your budget.</h1>
+					<div class="has-text-centered">
+						<%= link_to "Subtract Purchase", new_budget_transaction_path(current_user), {class: "button dash-button is-primary", :remote=> true} %>
+						<br><br>
+						<%= link_to "Add Income", new_budget_transaction_path(current_user), {class: "button dash-button", :remote=> true} %>
 					</div>
 				</div>
 				<div class="column">
 					<!-- This is where each spending category goes -->
+					<h1 class="spending-title">Payments</h1>
 					<ul>
 						<% current_user.budget.categories.each do |list| %>
-							<li><%= list.name %><%= list.id %></li>
-							<% current_user.budget.transactions.each do |cat| %>
-								<% if cat.category_id == list.id %>
-									<li><%= cat.name %><%= cat.amount %></li>
+							<% if list.fixed == true %>
+								<li class="category">
+									<%= list.name %>
+									<span class="is-pulled-right">
+										<%= list.amount + @transactions.where(:category_id => list.id).sum(:amount) %>
+									</span>
+									
+								</li>
+								<% current_user.budget.transactions.each do |cat| %>
+									<% if cat.category_id == list.id %>
+										<li class="transaction"><%= cat.name %><%= cat.amount%></li>
+									<% end %>
+								<% end %>
+							<% end %>
+						<% end %>
+					</ul>
+
+					<br>
+					<h1 class="spending-title">Spending</h1>
+					<ul>
+						<% current_user.budget.categories.each do |list| %>
+							<% if list.fixed == false %>
+								<li class="category">
+									<%= list.name %>
+									<span class="is-pulled-right">
+										<%= list.amount + @transactions.where(:category_id => list.id).sum(:amount) %>
+									</span>
+									
+								</li>
+								<% current_user.budget.transactions.each do |cat| %>
+									<% if cat.category_id == list.id %>
+										<li class="transaction"><%= cat.name %><%= cat.amount%></li>
+									<% end %>
 								<% end %>
 							<% end %>
 						<% end %>

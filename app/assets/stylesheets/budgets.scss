@@ -1,3 +1,15 @@
 // Place all the styles related to the Budgets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#starting_cash {
+	display: block;
+}
+
+#fixed_payments {
+	display: none;
+}
+
+#flex_payments, #flex_payments_add {
+	display: none;
+}

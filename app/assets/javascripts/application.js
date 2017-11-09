@@ -44,3 +44,10 @@ $(document).on('click', '.notification > button.delete', function() {
       return false;
     })
 });
+
+function transaction_check() {
+  if ($("#transaction_amount").data('sub') == true) {
+    var amount = $("#transaction_amount").val();
+    $("#transaction_amount").val(amount * -1);
+  }
+}

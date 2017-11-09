@@ -9,7 +9,7 @@
 	<div class="field">
 		<%= form.label :amount, class: 'label' %>
 		<div class="control has-icons-left">
-			<%= form.text_field :amount, class: 'input' %>
+			<%= form.text_field :amount, class: 'input', id: 'transaction_amount', data: {sub: @subtract} %>
 			<span class="icon is-small is-left">
 				<i class="fa fa-usd"/>
 			</span>
@@ -20,5 +20,5 @@
 		<%= form.label :category_id, class: 'label' %>
 		<%= form.select :category_id, current_user.budget.categories.collect {|c| [c.name, c.id]} %>
 	</div>
-	<%= form.submit 'Add to Budget', class: 'button is-primary' %>
+	<%= form.submit 'Add to Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
 <% end %>

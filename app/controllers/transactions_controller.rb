@@ -1,6 +1,7 @@
 class TransactionsController < ApplicationController
 	def new
 		@budget = current_user.budget
+		@subtract = params[:subtract]
 		respond_to :js, :html
 	end
 
@@ -12,6 +13,6 @@ class TransactionsController < ApplicationController
 
 	private
 		def transaction_params
-			params.require(:transaction).permit(:name, :amount, :category_id)
+			params.require(:transaction).permit(:name, :amount, :category_id, :subtract)
 		end
 end

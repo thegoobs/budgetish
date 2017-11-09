@@ -15,9 +15,9 @@
 					</span>
 					<h1 class="title dash-title">in your budget.</h1>
 					<div class="has-text-centered">
-						<%= link_to "Subtract Purchase", new_budget_transaction_path(current_user), {class: "button dash-button is-primary", :remote=> true} %>
+						<%= link_to "Subtract Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "button dash-button is-primary", :remote=> true} %>
 						<br><br>
-						<%= link_to "Add Income", new_budget_transaction_path(current_user), {class: "button dash-button", :remote=> true} %>
+						<%= link_to "Add Income", new_budget_transaction_path(current_user, subtract: false), {class: "button dash-button", :remote=> true} %>
 					</div>
 				</div>
 				<div class="column">

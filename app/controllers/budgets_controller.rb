@@ -1,6 +1,8 @@
 class BudgetsController < ApplicationController
 	def new
 		@budget = Budget.new
+		@rent = Category.new(:name => 'Rent', :fixed => true)
+		@add_rent = true
 	end
 
 	def create

@@ -1,7 +1,8 @@
 <%= form_with(model: budget, local: true) do |form| %>
 <div class="form_container">
+
+  <progress class="progress is-primary" value="6" max="100"></progress>
   <div class="field" id="starting_cash">
-    <progress class="progress is-primary" value="15" max="100">15%</progress>
     <div class="form-title">
         <h1>Your Money</h1>
     </div>
@@ -17,7 +18,6 @@
   </div>
   
   <div class="field" id="fixed_payments">
-    <progress class="progress is-primary" value="30" max="100">30%</progress>
     <div class="form-title">
   	   <h1>Recurring Bills</h1>
     <p>What do you have to pay for each month?<p>
@@ -37,7 +37,6 @@
   </div>
 
   <div class="field" id="flex_payments">
-    <progress class="progress is-primary" value="45" max="100">45%</progress>
     <div class="form-title">
       <h1>Additional Spending</h1>
     <p>What else do you spend money on?</p>

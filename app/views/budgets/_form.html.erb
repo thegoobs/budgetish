@@ -33,10 +33,11 @@
       </div>
     </div>
     <br>
-    <div class="button is-primary has-text-right  " onClick="next_step('flex_payments')">Next: Additional Spending</div>
+    <div class="button is-primary has-text-right" onClick="next_step('flex_payments')">Next: Additional Spending</div>
+    <div class="button has-text-right" onClick="prev_step('starting_cash')">Back</div>
   </div>
 
-  <div class="field" id="flex_payments">
+  <div class="field" id="flex_payments" style="margin-bottom: 0">
     <div class="form-title">
       <h1>Additional Spending</h1>
     <p>What else do you spend money on?</p>
@@ -46,14 +47,15 @@
     <% end %>
   </div>
   <div class="field" id="flex_payments_add" onClick="category_clear()">
-    <br>
     <div class="button is-secondary">
       <i class="fa fa-plus has-text-primary">&nbsp</i>
       <%= form.add_nested_fields_link :categories, 'ADD CATEGORY', data: {insert_into: 'flex_payments'} %>
     </div>
 
     <br>
+    <br>
     <div class="button is-primary has-text-right" onClick="next_step('rank_flex_payments')">Next: Rank Your Spending</div>
+    <div class="button has-text-right" onClick="prev_step('fixed_payments')">Back</div>
   </div>
 
   <div class="field" id="rank_flex_payments">
@@ -65,14 +67,16 @@
 
     <br>
     <div class="button is-primary has-text-right" onClick="next_step('suggested_budget')">Next: Suggested Budget</div>
+    <div class="button has-text-right" onClick="prev_step('flex_payments')">Back</div>
   </div>
 
   <Div class="field" id="suggested_budget">
     <h1>Here is your suggested budget</h1>
-    <div id="suggested_budget_list">
-    </div>
+    <ul id="suggested_budget_list">
+    </ul>
     <br>
-    <%= form.submit class: 'button', onClick:'submit_form()' %>
+    <%= form.submit class: 'button is-primary', onClick:'submit_form()' %>
+    <div class="button has-text-right" onClick="prev_step('rank_flex_payments')">Back</div>
   </Div>
 
 </div>

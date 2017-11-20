@@ -35,11 +35,15 @@ function check_parameters(step_id) {
 	}
 
 	if (step_id == 'rank_flex_payments') {
+		flex_payments = [];
 		$('#flex_payments').children('fieldset').children('.nested-fields').children(".columns").children(".column").each(function() {
 			$(this).children('.input').each(function() {
 				flex_payments.push($(this).val());
 			});
 		});
+		
+		$('#rank_index').empty();
+		$('#rank_flex').empty();
 
 		flex_payments.forEach(function(item, index) {
 			$('#rank_index').append(
@@ -68,6 +72,58 @@ function check_parameters(step_id) {
 
 	return true;
 }
+function animate_step(step_id, next) {
+	if (next == true) {
+		$('#' + step_id).css("opacity", 0);
+		$('#' + step_id).css("display", "block");
+		$('#' + step_id).animate({
+			opacity: 1,
+		});
+
+		if (step_id == 'flex_payments') {
+			$('#flex_payments_add').css("opacity", 0);
+			$('#flex_payments_add').animate({
+				opacity: 1
+			});
+		}
+	}
+
+	else {
+		$('#' + step_id).css("opacity", 0);
+		$('.field').animate({
+			opacity: 0
+		}, 250);
+
+		$('#' + step_id).animate({
+			opacity: 1
+		});
+
+		if (step_id == 'flex_payments') {
+			$('#flex_payments_add').animate({
+				opacity: 1
+			});
+		}
+	}
+} 
+
+function prev_step(step_id) {
+	//hide everything
+	animate_step(step_id, false);
+	$('.field').hide();
+
+
+	//update the progress bar
+	var prog = parseInt($('progress').attr('value')) - 26;
+	$('progress').animate({
+		value: prog
+	});
+
+	//show the step that is called to go to
+	$('#' + step_id).show();
+	if (step_id == "flex_payments") {
+		$('#flex_payments_add').show();
+	}
+}
 
 function next_step(step_id) {
 	//check whether parameters were entered correctly
@@ -75,11 +131,18 @@ function next_step(step_id) {
 		return;
 	}
 
+	//update the progress bar
+	var prog = parseInt($('progress').attr('value')) + 26;
+	$('progress').animate({
+		value: prog
+	});
+
 	//hide everything
 	$('.field').hide();
 
 	//show the step that is called to go to
 	$('#' + step_id).show();
+	animate_step(step_id, true);
 	if (step_id == "flex_payments") {
 		$('#flex_payments_add').show();
 	}

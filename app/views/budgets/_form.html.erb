@@ -28,8 +28,9 @@
 
     <div onClick="category_clear()">
       <div class="button is-secondary">
-    	<%= form.add_nested_fields_link :categories, 'ADD CATEGORY' %>
-    </div>
+       <i class="fa fa-plus has-text-primary">&nbsp</i>
+    	 <%= form.add_nested_fields_link :categories, 'ADD CATEGORY' %>
+      </div>
     </div>
     <br>
     <div class="button is-primary has-text-right  " onClick="next_step('flex_payments')">Next: Additional Spending</div>
@@ -46,13 +47,24 @@
     <% end %>
   </div>
   <div class="field" id="flex_payments_add" onClick="category_clear()">
-    <%= form.add_nested_fields_link :categories, 'ADD CATEGORY', data: {insert_into: 'flex_payments'} %>
+    <div class="button is-secondary">
+      <i class="fa fa-plus has-text-primary">&nbsp</i>
+      <%= form.add_nested_fields_link :categories, 'ADD CATEGORY', data: {insert_into: 'flex_payments'} %>
+    </div>
 
     <br>
-    <%= form.submit class: 'button', onClick:'fixed_fix()' %>
+    <div class="button" onClick="next_step('rank_flex_payments')">Next</div>
   </div>
 
   <div class="field" id="rank_flex_payments">
+    <h1>Rank your spending categories</h1>
+    <div class="columns is-mobile">
+      <ul id="rank_index"></ul>
+      <ul  id="rank_flex"></ul>
+    </div>
+
+    <br>
+    <%= form.submit class: 'button', onClick:'fixed_fix()' %>
   </div>
 
 </div>

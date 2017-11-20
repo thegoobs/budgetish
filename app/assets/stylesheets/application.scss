@@ -84,7 +84,16 @@ fieldset {
 }
 
 
+.drag-block {
+	margin: 12px;
+	background-color: #f2f2f2;
+	border-radius: 50px;
+	padding: 12px;
+}
 
+.ghost {
+	opacity: 0;
+}
 
 .jumbo {
 	display: inline-block;

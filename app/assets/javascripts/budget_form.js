@@ -3,6 +3,8 @@ var cat_ctr = 0;
 
 var flex_payments = [];
 
+var flex_payments_order = [];
+
 function category_clear() {
 	category_was_selected = true;
 	return;
@@ -41,7 +43,7 @@ function check_parameters(step_id) {
 
 		flex_payments.forEach(function(item, index) {
 			$('#rank_index').append(
-				'<li class="column drag-block">' + (index + 1) + '</li>');
+				'<li class="column drag-index">' + (index + 1) + '</li>');
 			$('#rank_flex').append(
 				'<li class="drag-block column has-text-centered">' + item + '</li>');
 		});
@@ -49,6 +51,18 @@ function check_parameters(step_id) {
 		Sortable.create(rank_flex, {
 			animation: 150,
 			ghostClass: 'ghost'
+		});
+	}
+
+	if (step_id == 'suggested_budget') {
+		flex_payments = [];
+		$('#rank_flex').children().each(function() {
+			flex_payments_order.push($(this).html());
+		});
+
+		flex_payments_order.forEach(function(item, index) {
+			$('#suggested_budget_list').append(
+				'<li>' + item + '</li>');
 		});
 	}
 
@@ -77,4 +91,9 @@ function fixed_fix() {
 			$(this).attr("value", false);
 		});
 	});
+}
+
+function submit_form() {
+	//set the fixed boolean to false for spending categories
+	fixed_fix();
 }

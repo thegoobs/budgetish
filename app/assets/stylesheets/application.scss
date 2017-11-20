@@ -18,12 +18,23 @@ $dark-primary: #66a346;
 // Import bulma.scss
 @import 'Bulma';
 
+/* Text */
 h1 {
 	font-size: 32px;
+}
+
+h2 {
+	font-size: 20px;
 }
 body {
 	font-family: 'Nunito', sans-serif;
 }
+
+label.label {
+	font-size: 12px;
+}
+
+/* Nav Bar */
 .navbar {
 	height: 75px;
 }
@@ -36,6 +47,30 @@ body {
 	background-color: $primary;
 }
 
+
+/* Button Changes */
+.button-remove a {
+	color: white;
+}
+
+
+/* Form */
+
+.form_container {
+	padding: 50px;
+}
+
+.nested-fields{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+fieldset {
+	border: none;
+}
+
+
+
 .notification {
 	margin-top: 25px;
 }
@@ -44,9 +79,7 @@ body {
 	border: 1px solid red;
 }
 
-label.label {
-	font-size: 12px;
-}
+
 
 
 .jumbo {
@@ -86,6 +119,3 @@ label.label {
 	padding-bottom: 8px;
 }
 
-.form_container {
-	padding: 50px;
-}

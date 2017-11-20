@@ -18,6 +18,9 @@ $dark-primary: #66a346;
 // Import bulma.scss
 @import 'Bulma';
 
+h1 {
+	font-size: 32px;
+}
 body {
 	font-family: 'Nunito', sans-serif;
 }
@@ -81,4 +84,8 @@ label.label {
 	padding-right: 12px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+}
+
+.form_container {
+	padding: 50px;
 }

@@ -1,5 +1,9 @@
 <%= form_with(model: budget, local: true) do |form| %>
+<div class="form_container">
   <div class="field" id="starting_cash">
+    <progress class="progress is-primary" value="15" max="100">15%</progress>
+    <h1>Your Money</h1>
+     <br></br>
   	<h1 class="label">How much money do you have outside of savings?</h1> 
     <p class="control has-icons-left">
   	 <%= form.text_field :starting_cash, id:'starting_cash_field',class: 'input', autocomplete: :off %>
@@ -8,30 +12,32 @@
      </span>
     </p>
     <br>
-    <div class="button" onClick="next_step('fixed_payments')">Next</div>
+    <div class="button is-primary" onClick="next_step('fixed_payments')">Next: Recurring Bills</div>
   </div>
   
   <div class="field" id="fixed_payments">
-  	<h1>Payments</h1>
+    <progress class="progress is-primary" value="30" max="100">30%</progress>
+  	<h1>Recurring Bills</h1>
   	<%= form.nested_fields_for :categories do |c| %>
   		<%= render 'category_fields', :f => c %>
   	<% end %>
 
     <div onClick="category_clear()">
-    	<%= form.add_nested_fields_link :categories, 'Other' %>
+    	<%= form.add_nested_fields_link :categories, 'Add Category' %>
     </div>
     <br>
-    <div class="button" onClick="next_step('flex_payments')">Next</div>
+    <div class="button is-primary" onClick="next_step('flex_payments')">Next: Additional Spending</div>
   </div>
 
   <div class="field" id="flex_payments">
-    <h1>Extra Spending Money</h1>
+    <progress class="progress is-primary" value="45" max="100">45%</progress>
+    <h1>Additional Spending</h1>
     <%= form.nested_fields_for :categories do |c| %>
       <%= render 'flex_category_fields', :f => c %>
     <% end %>
   </div>
   <div class="field" id="flex_payments_add" onClick="category_clear()">
-    <%= form.add_nested_fields_link :categories, 'Other', data: {insert_into: 'flex_payments'} %>
+    <%= form.add_nested_fields_link :categories, 'Add Category', data: {insert_into: 'flex_payments'} %>
 
     <br>
     <%= form.submit class: 'button', onClick:'fixed_fix()' %>
@@ -39,4 +45,6 @@
 
   <div class="field" id="rank_flex_payments">
   </div>
+
+</div>
 <% end %>

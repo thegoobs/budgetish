@@ -65,6 +65,7 @@ function check_parameters(step_id) {
 		});
 
 		flex_payments_order.forEach(function(item, index) {
+			set_order(index, item);
 			$('#suggested_budget_list').append(
 				'<li>' + item + '</li>');
 		});
@@ -108,7 +109,7 @@ function animate_step(step_id, next) {
 
 function prev_step(step_id) {
 	//hide everything
-	animate_step(step_id, false);
+	// animate_step(step_id, false);
 	$('.field').hide();
 
 
@@ -142,7 +143,7 @@ function next_step(step_id) {
 
 	//show the step that is called to go to
 	$('#' + step_id).show();
-	animate_step(step_id, true);
+	// animate_step(step_id, true);
 	if (step_id == "flex_payments") {
 		$('#flex_payments_add').show();
 	}
@@ -152,6 +153,16 @@ function fixed_fix() {
 	$("#flex_payments").children("fieldset").children(".nested-fields").each(function() {
 		$(this).children(".columns").children("#hidden_fixed").each(function() {
 			$(this).attr("value", false);
+		});
+	});
+}
+
+function set_order(o, name) {
+	$("#flex_payments").children("fieldset").children(".nested-fields").each(function() {
+		$(this).children(".columns").children(".column").each(function() {
+			if ($(this).children("#input_name").val() == name) {
+				$(this).parent().children("#hidden_order").attr("value", o);
+			}
 		});
 	});
 }

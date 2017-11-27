@@ -6,7 +6,10 @@
     <div class="form-title">
         <h1>Your Money</h1>
     </div>
-  	<h1 class="label">How much money do you have outside of savings?</h1> 
+  	
+    <h1 class="label">How much money do you have outside of savings? <i class="fa fa-question-circle is-primary"></i></h1> 
+
+
     <p class="control has-icons-left">
   	 <%= form.text_field :starting_cash, id:'starting_cash_field',class: 'input', autocomplete: :off %>
      <span class="icon is-small is-left">
@@ -14,7 +17,7 @@
      </span>
     </p>
     <br>
-    <div class="button is-primary" onClick="next_step('fixed_payments')">Next: Recurring Bills</div>
+    <div class="button is-primary button-next" onClick="next_step('fixed_payments')">Next: Recurring Bills</div>
   </div>
   
   <div class="field" id="fixed_payments">
@@ -33,7 +36,7 @@
       </div>
     </div>
     <br>
-    <div class="button is-primary has-text-right" onClick="next_step('flex_payments')">Next: Additional Spending</div>
+    <div class="button is-primary button-next" onClick="next_step('flex_payments')">Next: Additional Spending</div>
     <div class="button has-text-right" onClick="prev_step('starting_cash')">Back</div>
   </div>
 
@@ -54,19 +57,19 @@
 
     <br>
     <br>
-    <div class="button is-primary has-text-right" onClick="next_step('rank_flex_payments')">Next: Rank Your Spending</div>
-    <div class="button has-text-right" onClick="prev_step('fixed_payments')">Back</div>
+    <div class="button is-primary button-next" onClick="next_step('rank_flex_payments')">Next: Prioritize Spending Categories</div>
+    <div class="button" onClick="prev_step('fixed_payments')">Back</div>
   </div>
 
   <div class="field" id="rank_flex_payments">
-    <h1>Rank your spending categories</h1>
+    <h1>Prioritize your spending categories</h1>
     <div class="columns is-mobile">
       <ul id="rank_index"></ul>
       <ul  id="rank_flex"></ul>
     </div>
 
     <br>
-    <div class="button is-primary has-text-right" onClick="next_step('suggested_budget')">Next: Suggested Budget</div>
+    <div class="button is-primary button-next" onClick="next_step('suggested_budget')">Next: Suggested Budget</div>
     <div class="button has-text-right" onClick="prev_step('flex_payments')">Back</div>
   </div>
 

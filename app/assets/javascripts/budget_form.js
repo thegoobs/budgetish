@@ -60,14 +60,31 @@ function check_parameters(step_id) {
 
 	if (step_id == 'suggested_budget') {
 		flex_payments = [];
+		flex_payments_order = [];
 		$('#rank_flex').children().each(function() {
 			flex_payments_order.push($(this).html());
 		});
 
+		$('#suggested_budget_list').empty();
 		flex_payments_order.forEach(function(item, index) {
 			set_order(index, item);
 			$('#suggested_budget_list').append(
-				'<li>' + item + '</li>');
+				'<li>' + 
+					'<span class="slider_name">' + item + '</span>' + 
+					'<span class="slider_info" id="slider_info_' + index.toString() + '">0</span><br>' +
+					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="0">' +
+				'</li>');
+
+			$('#slider_' + index.toString()).on('input', function() {
+				$('#slider_info_' + index.toString()).html($(this).val());
+				var temp = $(this).val();
+				var t = this;
+				$('.nested_budget_categories').each(function() {
+					if ($(this).find('#input_name').val() == item) {
+						$(this).find('#cat_amount').find('input').val(temp);
+					}
+				})
+			});
 		});
 	}
 
@@ -171,3 +188,9 @@ function submit_form() {
 	//set the fixed boolean to false for spending categories
 	fixed_fix();
 }
+
+$(document).on("fields_added.nested_form_fields", function(event, param) {
+	if ($(event.target).parent().attr('id') == "flex_payments") {
+		$(event.target).find("#cat_amount").css("display", "none");
+	}
+});

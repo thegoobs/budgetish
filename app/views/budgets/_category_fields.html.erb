@@ -4,15 +4,15 @@
 			<%= f.label :name, class: 'label' %>
 			<%= f.text_field :name, class: 'input', id: "input_name"%>
 		</div>
-		<div class="column">
-  	<%= f.label :amount, class: 'label' %>
-  	<p class="control has-icons-left">
-	  	<%= f.text_field :amount, class: 'input' %>
-	  	<span class="icon is-small is-left">
-	  		<i class="fa fa-dollar"></i>
-	  	</span>
-	</p>
-	</div>
+		<div class="column" id="cat_amount">
+		  	<%= f.label :amount, class: 'label' %>
+		  	<p class="control has-icons-left">
+			  	<%= f.text_field :amount, class: 'input' %>
+			  	<span class="icon is-small is-left">
+			  		<i class="fa fa-dollar"></i>
+			  	</span>
+			</p>
+		</div>
 
 	<%= f.hidden_field :fixed, value: true, id: 'hidden_fixed' %>
 	<%= f.hidden_field :order, value: 0, id: 'hidden_order' %>

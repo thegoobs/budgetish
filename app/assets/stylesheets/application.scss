@@ -48,6 +48,19 @@ label.label {
 }
 
 
+/*Landing Page*/
+
+.hero-body {
+	background: url("hero.png");
+	background-size: cover;
+}
+
+#blurb1 {
+	background: url("happywoman.jpg");
+	background-size: cover;
+	height: 500px;
+}
+
 /* Button Changes */
 
 .button-remove a {
@@ -143,6 +156,8 @@ fieldset {
 }
 
 
+
+/*Pop-Up*/
 dfn {
   	cursor: pointer;
   	font-style: normal;

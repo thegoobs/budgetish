@@ -7,7 +7,6 @@ var flex_payments_order = [];
 
 function category_clear() {
 	category_was_selected = true;
-	return;
 }
 
 function check_parameters(step_id) {
@@ -129,7 +128,6 @@ function prev_step(step_id) {
 	// animate_step(step_id, false);
 	$('.field').hide();
 
-
 	//update the progress bar
 	var prog = parseInt($('progress').attr('value')) - 26;
 	$('progress').animate({
@@ -193,4 +191,10 @@ $(document).on("fields_added.nested_form_fields", function(event, param) {
 	if ($(event.target).parent().attr('id') == "flex_payments") {
 		$(event.target).find("#cat_amount").css("display", "none");
 	}
+});
+
+$(document).on("keypress", function (e) {
+    if (e.keyCode == 13) {
+        return false;
+    }
 });

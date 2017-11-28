@@ -45,7 +45,7 @@
 					<br>
 					<h1 class="spending-title">Spending</h1>
 					<ul>
-						<% current_user.budget.categories.each do |list| %>
+						<% current_user.budget.categories.order([:order]).each do |list| %>
 							<% if list.fixed == false %>
 								<li class="category">
 									<%= list.order %>

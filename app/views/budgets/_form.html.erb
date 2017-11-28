@@ -29,12 +29,13 @@
   		<%= render 'category_fields', :f => c %>
   	<% end %>
 
-    <div onClick="category_clear()">
-      <div class="button is-secondary">
-       <i class="fa fa-plus has-text-primary">&nbsp</i>
-    	 <%= form.add_nested_fields_link :categories, 'ADD CATEGORY' %>
+    <%= form.add_nested_fields_link :categories do %>
+      <div class="button is-secondary" onClick="category_clear()">
+        <i class="fa fa-plus has-text-primary">&nbsp</i>
+        <span>ADD CATEGORY</span>
       </div>
-    </div>
+    <% end %>
+    <br>
     <br>
     <div class="button is-primary button-next" onClick="next_step('flex_payments')">Next: Additional Spending</div>
     <div class="button has-text-right" onClick="prev_step('starting_cash')">Back</div>
@@ -50,10 +51,12 @@
     <% end %>
   </div>
   <div class="field" id="flex_payments_add" onClick="category_clear()">
-    <div class="button is-secondary">
-      <i class="fa fa-plus has-text-primary">&nbsp</i>
-      <%= form.add_nested_fields_link :categories, 'ADD CATEGORY', data: {insert_into: 'flex_payments'} %>
-    </div>
+      <%= form.add_nested_fields_link :categories, data: {insert_into: 'flex_payments'} do %>
+        <div class="button is-secondary">
+          <i class="fa fa-plus has-text-primary">&nbsp</i>
+          <span>ADD CATEGORY</span>
+        </div>
+      <% end %>
 
     <br>
     <br>

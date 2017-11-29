@@ -50,7 +50,7 @@ label.label {
 
 /*Landing Page*/
 
-.hero-body {
+.hero-picture {
 	background: url("hero.png");
 	background-size: cover;
 }
@@ -130,6 +130,10 @@ fieldset {
 	font-size: 22px;
 }
 
+/*Dashboard*/
+.dashboard {
+	margin-top: 50px;
+}
 .dash-title {
 	font-size: 24px;
 }
@@ -170,7 +174,7 @@ dfn::after {
   position: absolute;
   top: 22px; left: 0;
   opacity: 0;
-	width: 100px;
+	width: 300px;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5em;

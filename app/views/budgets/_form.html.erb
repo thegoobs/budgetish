@@ -7,7 +7,8 @@
         <h1>Your Money</h1>
     </div>
   	
-    <h1 class="label">How much money do you have outside of savings? <dfn data-info="make this popup!"><i class="fa fa-question-circle is-primary"></i></dfn></h1> 
+    <h1 class="label">How much money do you have outside of savings? <dfn data-info="This should include money in your checking account and cash. Pretty much every accessible dollar you have right now.
+"><i class="fa fa-question-circle is-primary"></i></dfn></h1> 
 
 
     <p class="control has-icons-left">
@@ -23,7 +24,7 @@
   <div class="field" id="fixed_payments">
     <div class="form-title">
   	   <h1>Recurring Bills</h1>
-    <p>What do you have to pay for each month?<p>
+    <p>What do you have to pay for each month? <dfn data-info="These are expenses that you pay each month. Think of things that you actually get a bill for (even if it’s through your email or automatically subtracts from your account). We’ll move on to additional spending in the next step."><i class="fa fa-question-circle is-primary"></i></dfn><p>
     </div>
   	<%= form.nested_fields_for :categories do |c| %>
   		<%= render 'category_fields', :f => c %>
@@ -44,7 +45,7 @@
   <div class="field" id="flex_payments" style="margin-bottom: 0">
     <div class="form-title">
       <h1>Additional Spending</h1>
-    <p>What else do you spend money on?</p>
+    <p>What else do you spend money on? <dfn data-info="This should include everything else you spend money on, but maybe don’t get an actual bill for. An easy way to think of this is everything you might swipe your card or pull out cash from your wallet for. You can always add new categories later, but the more specific you are the more personalized your budget will be."><i class="fa fa-question-circle is-primary"></i></dfn></p>
     </div>
     <%= form.nested_fields_for :categories do |c| %>
       <%= render 'flex_category_fields', :f => c %>
@@ -66,6 +67,7 @@
 
   <div class="field" id="rank_flex_payments">
     <h1>Prioritize your spending categories</h1>
+     <p>Arrange your Additional Spending by how much it costs you. <dfn data-info="For example, if you rarely drive your car but go out to lunch everyday, put Gas at the bottom and Dining Out higher up. This will help us create a suggested budget for your unique needs."><i class="fa fa-question-circle is-primary"></i></dfn></p>
     <div class="columns is-mobile">
       <ul id="rank_index"></ul>
       <ul  id="rank_flex"></ul>
@@ -77,7 +79,8 @@
   </div>
 
   <Div class="field" id="suggested_budget">
-    <h1>Here is your suggested budget</h1>
+    <h1>Suggested Budget</h1>
+     <p>Here’s a suggested budget, based on your Recurring Bills and Additional Spending. <dfn data-info="We took your current available money and budgeted it for each of your Recurring Bills and Additional Spending, based on the amount it cost and how you prioritized it. Every time you receive more income, we’ll allocate it to each category based on these percentages (unless you decide otherwise for that specific income). When you make a new purchase, we’ll subtract it from the designated category to reflect your ongoing balance and spending history."><i class="fa fa-question-circle is-primary"></i></dfn></p>
     <ul id="suggested_budget_list">
     </ul>
     <br>

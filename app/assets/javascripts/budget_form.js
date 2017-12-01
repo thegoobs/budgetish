@@ -5,6 +5,12 @@ var flex_payments = [];
 
 var flex_payments_order = [];
 
+var total_cash = 0;
+var suggested_amount = 0;
+var m = 0;
+var n = 0;
+var sum = 0;
+
 function category_clear() {
 	category_was_selected = true;
 }
@@ -14,6 +20,7 @@ function check_parameters(step_id) {
 	if (step_id == 'fixed_payments') {
 		//starting cash check
 		if (!isNaN(parseFloat($('#starting_cash_field').val()))) {
+			total_cash = $('#starting_cash_field').val();
 			return true;
 		}
 		else {
@@ -65,17 +72,32 @@ function check_parameters(step_id) {
 		});
 
 		$('#suggested_budget_list').empty();
+		sum = 0;
+		n = flex_payments_order.length;
+		m = (200 - 2 * n)/((n*n) + n);
 		flex_payments_order.forEach(function(item, index) {
 			set_order(index, item);
+
+			//sum of (slope * x) from 0 to n = 100%, where:
+			//n = number of categories
+			//slope = (n^2 + n) / 2
+			suggested_amount = (m * (n - index)) + 1;
+
+			sum += suggested_amount;
 			$('#suggested_budget_list').append(
 				'<li>' + 
 					'<span class="slider_name">' + item + '</span>' + 
-					'<span class="slider_info" id="slider_info_' + index.toString() + '">0</span><br>' +
-					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="0">' +
+					'<span class="slider_info" id="slider_info_' + index.toString() + '"></span>' + 
+					'<span class="slider_info" id="slider_value_' + index.toString() + '"></span><br>' +
+					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="' + suggested_amount + '">' +
 				'</li>');
+
+			$('#slider_info_' + index.toString()).html($('#slider_' + index.toString()).val());
+			$('#slider_value_' + index.toString()).html(total_cash * $('#slider_' + index.toString()).val()/100);
 
 			$('#slider_' + index.toString()).on('input', function() {
 				$('#slider_info_' + index.toString()).html($(this).val());
+				$('#slider_value_' + index.toString()).html(total_cash * $(this).val()/100);
 				var temp = $(this).val();
 				var t = this;
 				$('.nested_budget_categories').each(function() {
@@ -85,6 +107,7 @@ function check_parameters(step_id) {
 				})
 			});
 		});
+		console.log(sum);
 	}
 
 	return true;

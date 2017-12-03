@@ -42,8 +42,21 @@ $(document).on('click', '.notification > button.delete', function() {
     }, 200, function() {
       $(this).remove();
       return false;
-    })
+    });
 });
+
+//Bulma hide notification on any click
+$(document).on('click', function() {
+  if ($('.notification').css('opacity') != 0) {
+    $('.notification').animate({
+        top: '-20px',
+        opacity: '0'
+      }, 200, function() {
+        $(this).remove();
+        return false;
+      });
+  }
+})
 
 function transaction_check() {
   if ($("#transaction_amount").data('sub') == true) {

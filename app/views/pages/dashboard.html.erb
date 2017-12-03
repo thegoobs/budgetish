@@ -52,7 +52,6 @@
 						<% current_user.budget.categories.order([:order]).each do |list| %>
 							<% if list.fixed == false %>
 								<li class="category">
-									<%= list.order %>
 									<%= list.name %>
 									<span class="is-pulled-right">
 										<%= list.amount + @transactions.where(:category_id => list.id).sum(:amount) %>

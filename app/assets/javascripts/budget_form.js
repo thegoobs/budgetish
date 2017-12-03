@@ -78,9 +78,9 @@ function check_parameters(step_id) {
 		flex_payments_order.forEach(function(item, index) {
 			set_order(index, item);
 
-			//sum of (slope * x) from 0 to n = 100%, where:
+			//sum of (m * x) from x=0 to n = 100%, where:
 			//n = number of categories
-			//slope = (n^2 + n) / 2
+			//m = derivation from the sum
 			suggested_amount = (m * (n - index)) + 1;
 
 			sum += suggested_amount;
@@ -95,6 +95,12 @@ function check_parameters(step_id) {
 			$('#slider_info_' + index.toString()).html($('#slider_' + index.toString()).val());
 			$('#slider_value_' + index.toString()).html(total_cash * $('#slider_' + index.toString()).val()/100);
 
+			$('.nested_budget_categories').each(function() {
+				if ($(this).find('#input_name').val() == item) {
+					$(this).find('#cat_amount').find('input').val(total_cash * $('#slider_' + index.toString()).val()/100);
+					$(this).find('#hidden_percent').val($('#slider_' + index.toString()).val());
+				}
+			});
 			$('#slider_' + index.toString()).on('input', function() {
 				$('#slider_info_' + index.toString()).html($(this).val());
 				$('#slider_value_' + index.toString()).html(total_cash * $(this).val()/100);
@@ -102,9 +108,10 @@ function check_parameters(step_id) {
 				var t = this;
 				$('.nested_budget_categories').each(function() {
 					if ($(this).find('#input_name').val() == item) {
-						$(this).find('#cat_amount').find('input').val(temp);
+						$(this).find('#cat_amount').find('input').val(total_cash * temp/100);
+						$(this).find('#hidden_percent').val(temp);
 					}
-				})
+				});
 			});
 		});
 		console.log(sum);

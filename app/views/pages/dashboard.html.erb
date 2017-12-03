@@ -1,5 +1,5 @@
 <!-- Modal container -->
-<div id="modal-holder" title="New Transaction" style="display: none">
+<div id="modal-holder" title="New Transaction">
 </div>
 
 <!-- content -->
@@ -14,15 +14,19 @@
 						<%= current_user.budget.current_cash %>
 					</span>
 					<h1 class="title dash-title">in your budget.</h1>
-					<div class="has-text-centered">
-						<%= link_to "Subtract Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "button dash-button is-primary", :remote=> true} %>
-						<br><br>
-						<%= link_to "Add Income", new_budget_transaction_path(current_user, subtract: false), {class: "button dash-button", :remote=> true} %>
+					<br></br>
+					<div class="columns is-2">
+						<div class="column">
+						<%= link_to "New Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "button dash-button is-primary", :remote=> true} %>
+						</div>
+						<div class="column">
+						<%= link_to "New Income", new_budget_transaction_path(current_user, subtract: false), {class: "button dash-button", :remote=> true} %>
+						</div>
 					</div>
 				</div>
 				<div class="column">
 					<!-- This is where each spending category goes -->
-					<h1 class="spending-title">Payments</h1>
+					<h1 class="spending-title">Recurring Bills</h1>
 					<ul>
 						<% current_user.budget.categories.each do |list| %>
 							<% if list.fixed == true %>
@@ -43,7 +47,7 @@
 					</ul>
 
 					<br>
-					<h1 class="spending-title">Spending</h1>
+					<h1 class="spending-title">Additional Spending</h1>
 					<ul>
 						<% current_user.budget.categories.order([:order]).each do |list| %>
 							<% if list.fixed == false %>

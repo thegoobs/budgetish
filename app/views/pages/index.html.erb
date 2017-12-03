@@ -7,7 +7,7 @@
   </section>
 
   <div class="columns">
-    <div class="column" id="blurb1">
+    <div class="column is-half" id="blurb1">
     </div>
     <div class="column blurb">
         <h2 class="has-text-primary has-text-weight-semibold title is-3">No Money? No Problem.</h2>
@@ -20,12 +20,12 @@
       <h2 class="has-text-primary has-text-weight-semibold title is-3">Unique to You.</h2>
       <p class="is-size-5">Not everybody spends and saves their money the same way. We’ll help set up a simple budget based on your preferences, but give you the flexibility make adjustments whenever you need. </p>
     </div>
-    <div class="column" id="blurb2" >
+    <div class="column is-half" id="blurb2" >
     </div>
   </div> <!--row 2 ends here-->
 
   <div class="columns">
-    <div class="column" id="blurb3">
+    <div class="column is-half" id="blurb3">
     </div>
     <div class="column blurb">
       <h2 class="has-text-primary has-text-weight-semibold title is-3">Anyone Can Budget. You Just Have To Start.</h2>
@@ -33,10 +33,17 @@
     </div>
   </div> <!--row 3 ends here-->
 
-  <div class="column has-text-centered is-primary">
-    <h2 class="has-text-weight-semibold">Let Us Help You Budget.</h2>
+  <div class="columns">
+  <div class="column has-text-centered call-to-action">
+    <h2 class="has-text-weight-semibold is-size-3">Let Us Help You Budget.</h2>
       <p class="is-size-5">Create your free account in minutes. You should be saving money; not spending it.</p>
+      <br>
+      <div class="button is-secondary"> 
+        <%= link_to('CREATE AN ACCOUNT', new_user_registration_path)%>
+      </div>
   </div>
+</div>
+
 
   <footer class="footer">
   <div class="container">

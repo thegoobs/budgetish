@@ -81,6 +81,13 @@ label.label {
 	padding: 80px;
 }
 
+.call-to-action {
+	background: #99D167;
+	height: 225px;
+	color: white;
+	padding-top: 40px;
+}
+
 /* Button Changes */
 
 .button-remove a {
@@ -219,3 +226,17 @@ dfn:hover::before {opacity: 1;}
 dfn:hover::after {top: 30px;}
 dfn:hover::before {top: 20px;}
 
+	
+
+#ui-id-1 {
+	font-family: nunito;
+	background: none;
+}
+.popup .ui-widget-header {
+    background-color: white;
+    color: black;
+    font-size: 22px;
+}
+.ui-widget-header{
+	border: none;
+}

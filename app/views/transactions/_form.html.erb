@@ -1,4 +1,6 @@
+
 <%= form_with(model: [ @budget, @budget.transactions.build ], remote: true) do |form| %>
+<div class="transaction">
 	<div class="field">
 		<%= form.label :name, class: 'label' %>
 		<div class="control">
@@ -21,4 +23,5 @@
 		<%= form.select :category_id, current_user.budget.categories.collect {|c| [c.name, c.id]} %>
 	</div>
 	<%= form.submit 'Add to Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
+</div>
 <% end %>

@@ -63,6 +63,7 @@ label.label {
 	background: url("coffee_phone.jpg");
 	background-size: cover;
 	height: 400px;
+
 }
 
 #blurb2 {
@@ -94,11 +95,18 @@ label.label {
 	color: white;
 }
 
+.add-category {
+	margin-top: 25px;
+	background-color: #f6f6f6;
+	font-weight: 700;
+}
+
 
 /* Form */
 
 .form_container {
 	padding: 50px;
+	max-width: 1100px;
 }
 
 .nested-fields{
@@ -112,12 +120,16 @@ fieldset {
 
 .form-title {
 	margin-bottom: 25px;
+	font-weight: 700;
 }
 
 .button-next {
 	float: right;
 }
 
+.text-box {
+	margin-bottom: 200px;
+}
 
 .notification {
 	margin-top: 25px;
@@ -207,7 +219,7 @@ dfn::after {
   opacity: 0;
 	width: 300px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5em;
   padding: 0.5em 0.8em;
   border: 1px solid #f2f2f2;

@@ -16,11 +16,26 @@
 					<h1 class="title dash-title">in your budget.</h1>
 					<br></br>
 					<div class="columns is-2">
+						<div class="column has-text-centered">
+						<span class="fa-stack fa-2x">
+							  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
+							  <i class="fa fa-minus fa-stack-1x fa-inverse"></i>
+							</span>
+						</div>
+						<div class="column has-text-centered">
+						<span class="fa-stack fa-2x">
+							  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
+							  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+							</span>
+						</div>
+					</div>
+					<div class="columns is-2">
 						<div class="column">
-						<%= link_to "New Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "button dash-button is-primary", :remote=> true} %>
+						<%= link_to "New Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "is-primary", :remote=> true} %>
 						</div>
 						<div class="column">
-						<%= link_to "New Income", new_budget_transaction_path(current_user, subtract: false), {class: "button dash-button", :remote=> true} %>
+							
+						<%= link_to "New Income", new_budget_transaction_path(current_user, subtract: false), {class: "is-primary", :remote=> true} %>
 						</div>
 					</div>
 				</div>

@@ -47,6 +47,10 @@ label.label {
 	background-color: $primary;
 }
 
+.navbar.is-primary .navbar-brand > a.navbar-item:hover, .navbar.is-primary .navbar-brand > a.navbar-item.is-active, .navbar.is-primary .navbar-brand .navbar-link:hover, .navbar.is-primary .navbar-brand .navbar-link.is-active {
+	background-color: $primary;
+}
+
 
 /*Landing Page*/
 
@@ -56,9 +60,32 @@ label.label {
 }
 
 #blurb1 {
-	background: url("happywoman.jpg");
+	background: url("coffee_phone.jpg");
 	background-size: cover;
-	height: 500px;
+	height: 400px;
+}
+
+#blurb2 {
+	background: url("happygirl.jpg");
+	background-size: cover;
+	height: 400px;
+}
+
+#blurb3 {
+	background: url("happydude.jpg");
+	background-size: cover;
+	height: 400px;
+}
+
+.blurb {
+	padding: 80px;
+}
+
+.call-to-action {
+	background: #99D167;
+	height: 225px;
+	color: white;
+	padding-top: 40px;
 }
 
 /* Button Changes */
@@ -199,3 +226,17 @@ dfn:hover::before {opacity: 1;}
 dfn:hover::after {top: 30px;}
 dfn:hover::before {top: 20px;}
 
+	
+
+#ui-id-1 {
+	font-family: nunito;
+	background: none;
+}
+.popup .ui-widget-header {
+    background-color: white;
+    color: black;
+    font-size: 22px;
+}
+.ui-widget-header{
+	border: none;
+}

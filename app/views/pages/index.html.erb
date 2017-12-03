@@ -1,43 +1,49 @@
-<section class="hero is-large">
-  <div class="hero-body hero-picture">
 
-    <div class="container">
-    </div>
+
+<section class="hero is-large columns">
+  <div class="hero-body hero-picture">
   </div>
 
   </section>
 
   <div class="columns">
-    <div class="column" id="blurb1">
+    <div class="column is-half" id="blurb1">
     </div>
-    <div class="column">
-        <h2>No Money? No Problem.</h2>
-      <p>We know your money might not always be consistent. That’s why we created this app with young adults in mind - specifically, those with low, inconsistent, or irregular income. </p>
+    <div class="column blurb">
+        <h2 class="has-text-primary has-text-weight-semibold title is-3">No Money? No Problem.</h2>
+      <p class="is-size-5">We know your money might not always be consistent. That’s why we created this app with young adults in mind - specifically, those with low, inconsistent, or irregular income. </p>
     </div>
   </div> <!--row 1 ends here-->
 
   <div class="columns">
-    <div class="column">
-      <h2>Unique to you</h2>
-      <p>Not everybody spends and saves their money the same way. We’ll help set up a simple budget based on your preferences, but give you the flexibility make adjustments whenever you need. </p>
+    <div class="column blurb">
+      <h2 class="has-text-primary has-text-weight-semibold title is-3">Unique to You.</h2>
+      <p class="is-size-5">Not everybody spends and saves their money the same way. We’ll help set up a simple budget based on your preferences, but give you the flexibility make adjustments whenever you need. </p>
     </div>
-    <div class="column" >
+    <div class="column is-half" id="blurb2" >
     </div>
   </div> <!--row 2 ends here-->
 
   <div class="columns">
-    <div class="column">
+    <div class="column is-half" id="blurb3">
     </div>
-    <div class="column">
-      <h2>Anyone Can Budget. You Just Have To Start.</h2>
-      <p>Starting a budget for the first time can be overwhelming. We provide suggested budgets, helpful tips, and easy to understand language to walk you through each step. Because no one likes a spreadsheet.</p>
+    <div class="column blurb">
+      <h2 class="has-text-primary has-text-weight-semibold title is-3">Anyone Can Budget. You Just Have To Start.</h2>
+      <p class="is-size-5">Starting a budget for the first time can be overwhelming. We provide suggested budgets, helpful tips, and easy to understand language to walk you through each step. Because no one likes a spreadsheet.</p>
     </div>
   </div> <!--row 3 ends here-->
 
-  <div class="column has-text-centered">
-    <h2 class="has-text-weight-semibold">Let Us Help You Budget.</h2>
-      <p>Create your free account in minutes. You should be saving money; not spending it.</p>
+  <div class="columns">
+  <div class="column has-text-centered call-to-action">
+    <h2 class="has-text-weight-semibold is-size-3">Let Us Help You Budget.</h2>
+      <p class="is-size-5">Create your free account in minutes. You should be saving money; not spending it.</p>
+      <br>
+      <div class="button is-secondary"> 
+        <%= link_to('CREATE AN ACCOUNT', new_user_registration_path)%>
+      </div>
   </div>
+</div>
+
 
   <footer class="footer">
   <div class="container">

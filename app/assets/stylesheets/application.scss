@@ -47,6 +47,10 @@ label.label {
 	background-color: $primary;
 }
 
+.navbar.is-primary .navbar-brand > a.navbar-item:hover, .navbar.is-primary .navbar-brand > a.navbar-item.is-active, .navbar.is-primary .navbar-brand .navbar-link:hover, .navbar.is-primary .navbar-brand .navbar-link.is-active {
+	background-color: $primary;
+}
+
 
 /*Landing Page*/
 
@@ -56,7 +60,19 @@ label.label {
 }
 
 #blurb1 {
-	background: url("happywoman.jpg");
+	background: url("coffee_phone.jpg");
+	background-size: cover;
+	height: 400px;
+}
+
+#blurb2 {
+	background: url("happygirl.jpg");
+	background-size: cover;
+	height: 400px;
+}
+
+#blurb3 {
+	background: url("happydude.jpg");
 	background-size: cover;
 	height: 400px;
 }

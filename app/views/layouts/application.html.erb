@@ -17,7 +17,9 @@
   	<nav class="navbar is-primary">
   		<!-- budgetish logo -->
   		<div class="navbar-brand">
-			<%= link_to("budget(ish)", root_path, class: 'navbar-item') %>
+			     <%= link_to(root_path, class: 'navbar-item') do %>
+        <%= image_tag("white_logo.png",  class: 'img-grow') %>
+      <% end %>
 
   			<!-- Mobile murger menu -->
 		    <div class="navbar-burger burger" data-target="navMenu">

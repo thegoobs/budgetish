@@ -15,28 +15,29 @@
 					</span>
 					<h1 class="title dash-title">in your budget.</h1>
 					<br></br>
-					<div class="columns is-2">
+					<div class="columns is-mobile">
+						<div class="column"></div>
 						<div class="column has-text-centered">
-						<span class="fa-stack fa-2x">
-							  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
-							  <i class="fa fa-minus fa-stack-1x fa-inverse"></i>
-							</span>
+							<%= link_to new_budget_transaction_path(current_user, subtract: true), {class: "is-primary", :remote=> true} do %>
+								<span class="fa-stack fa-2x">
+								  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
+								  <i class="fa fa-minus fa-stack-1x fa-inverse"></i>
+								</span>
+								<br>
+								<span>New Purchase</span>
+							<% end %>
 						</div>
 						<div class="column has-text-centered">
-						<span class="fa-stack fa-2x">
-							  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
-							  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
-							</span>
+							<%= link_to new_budget_transaction_path(current_user, subtract: false), {class: "is-primary", :remote=> true} do %>
+								<span class="fa-stack fa-2x">
+								  <i class="fa fa-circle fa-stack-2x has-text-primary"></i>
+								  <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+								</span>
+								<br>
+								<span>New Income</span>
+							<% end %>
 						</div>
-					</div>
-					<div class="columns is-2">
-						<div class="column">
-						<%= link_to "New Purchase", new_budget_transaction_path(current_user, subtract: true), {class: "is-primary", :remote=> true} %>
-						</div>
-						<div class="column">
-							
-						<%= link_to "New Income", new_budget_transaction_path(current_user, subtract: false), {class: "is-primary", :remote=> true} %>
-						</div>
+						<div class="column"></div>
 					</div>
 				</div>
 				<div class="column">
@@ -48,7 +49,7 @@
 								<li class="category">
 									<%= list.name %>
 									<span class="is-pulled-right">
-										<%= list.amount + @transactions.where(:category_id => list.id).sum(:amount) %>
+										<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
 									</span>
 									
 								</li>
@@ -69,7 +70,7 @@
 								<li class="category">
 									<%= list.name %>
 									<span class="is-pulled-right">
-										<%= list.amount + @transactions.where(:category_id => list.id).sum(:amount) %>
+										<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
 									</span>
 									
 								</li>

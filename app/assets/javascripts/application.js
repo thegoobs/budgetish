@@ -60,7 +60,7 @@ $(document).on('click', function() {
 
 function transaction_check() {
   if ($("#transaction_amount").data('sub') == true) {
-    var amount = $("#transaction_amount").val();
+    var amount = Math.abs($("#transaction_amount").val());
     $("#transaction_amount").val(amount * -1);
   }
 }

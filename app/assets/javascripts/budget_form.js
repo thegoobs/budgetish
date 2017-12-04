@@ -220,6 +220,8 @@ function submit_form() {
 $(document).on("fields_added.nested_form_fields", function(event, param) {
 	if ($(event.target).parent().attr('id') == "flex_payments") {
 		$(event.target).find("#cat_amount").css("display", "none");
+		$(event.target).find("#input_name").attr("placeholder", "Entertainment, Dining Out, Coffee, etc.");
+
 	}
 });
 

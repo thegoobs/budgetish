@@ -54,8 +54,15 @@ label.label {
 
 /*Landing Page*/
 
+.big-title {
+	color: white;
+}
+
+.big-title-container {
+	padding-left: 100px;
+}
 .hero-picture {
-	background: url("hero.png");
+	background: url("hero-girl.jpg");
 	background-size: cover;
 }
 
@@ -76,6 +83,7 @@ label.label {
 	background: url("happydude.jpg");
 	background-size: cover;
 	height: 400px;
+
 }
 
 .blurb {
@@ -195,7 +203,7 @@ fieldset {
 }
 
 .category {
-	border: 1px solid gray;
+	border: 1px solid #e9e9e9;
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-top: 8px;

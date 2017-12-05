@@ -32,6 +32,31 @@ function check_parameters(step_id) {
 	//step before is the fixed payments
 	if (step_id == 'flex_payments') {
 		if (category_was_selected == true) {
+			//check for correct inputs
+			var function_break = false;
+			$('fieldset').each(function() {
+				$(this).find('#input_name').each(function() {
+					if ($(this).val() == '') {
+						alert("Error: Category with no name found.");
+						function_break = true;
+					}
+				});
+			});
+
+			$('fieldset').each(function() {
+				$(this).find('#input_amount').each(function() {
+					if (isNaN(parseFloat($(this).val()))) {
+						alert("Error: Category with incorrect value found.");
+						function_break = true;
+					}
+				});
+			});
+
+			if (function_break == true) {
+				return false;
+			}
+
+			category_was_selected = false;
 			return true;
 		}
 		else {
@@ -41,27 +66,50 @@ function check_parameters(step_id) {
 	}
 
 	if (step_id == 'rank_flex_payments') {
-		flex_payments = [];
-		$('#flex_payments').children('fieldset').children('.nested-fields').children(".columns").children(".column").each(function() {
-			$(this).children('.input').each(function() {
-				flex_payments.push($(this).val());
+		if (category_was_selected == true) {
+			//check each input for values
+			var function_break = false;
+			$('fieldset').each(function() {
+				$(this).find('#input_name').each(function() {
+					if ($(this).val() == '') {
+						alert("Error: Category with no name found.");
+						function_break = true;
+					}
+				});
 			});
-		});
-		
-		$('#rank_index').empty();
-		$('#rank_flex').empty();
 
-		flex_payments.forEach(function(item, index) {
-			$('#rank_index').append(
-				'<li class="column drag-index">' + (index + 1) + '</li>');
-			$('#rank_flex').append(
-				'<li class="drag-block column has-text-centered">' + item + '</li>');
-		});
+			if (function_break == true) {
+				return false;
+			}
 
-		Sortable.create(rank_flex, {
-			animation: 150,
-			ghostClass: 'ghost'
-		});
+
+			flex_payments = [];
+			$('#flex_payments').children('fieldset').children('.nested-fields').children(".columns").children(".column").each(function() {
+				$(this).children('.input').each(function() {
+					flex_payments.push($(this).val());
+				});
+			});
+			
+			$('#rank_index').empty();
+			$('#rank_flex').empty();
+
+			flex_payments.forEach(function(item, index) {
+				$('#rank_index').append(
+					'<li class="column drag-index">' + (index + 1) + '</li>');
+				$('#rank_flex').append(
+					'<li class="drag-block column has-text-centered">' + item + '</li>');
+			});
+
+			Sortable.create(rank_flex, {
+				animation: 150,
+				ghostClass: 'ghost'
+			});
+			return true;
+		}
+		else {
+			alert("Please select at least one category");
+			return false;
+		}
 	}
 
 	if (step_id == 'suggested_budget') {

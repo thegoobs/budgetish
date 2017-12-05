@@ -61,6 +61,8 @@ function check_parameters(step_id) {
 				return false;
 			}
 
+			//make sure all flex categories already rendered hide the amount
+			$('fieldset').find("#cat_amount").css("display", "none");
 			category_was_selected = false;
 			return true;
 		}

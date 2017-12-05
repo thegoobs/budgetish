@@ -1,6 +1,11 @@
 class BudgetsController < ApplicationController
 	before_action :authenticate_user!
 
+	def show
+		@user = current_user
+		@budget = @user.budget		
+	end
+
 	def new
 		@budget = Budget.new
 		@rent = Category.new(:name => 'Rent', :fixed => true)
@@ -14,6 +19,22 @@ class BudgetsController < ApplicationController
 		@budget.current_cash = @budget.starting_cash
 		@user.budget = @budget
 		redirect_to pages_dashboard_path
+	end
+
+	def edit
+		@user = current_user
+		@budget = @user.budget
+		@edit = true
+	end
+
+	def update
+	    @budget = current_user.budget
+	    if @budget.update_attributes(budget_params)
+	      # Handle a successful update.
+	      redirect_to pages_dashboard_path
+	    else
+	      render 'edit'
+	    end
 	end
 
 	private

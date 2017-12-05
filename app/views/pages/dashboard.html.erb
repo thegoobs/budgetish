@@ -83,6 +83,12 @@
 							<% end %>
 						<% end %>
 					</ul>
+					<br>
+					<%= link_to edit_budget_path(current_user.id) do %>
+						<div class="button is-primary is-fullwidth">
+							<span>Edit Budget</span>
+						</div>
+					<% end %>
 				</div>
 			</div>
 		</div>
@@ -91,7 +97,7 @@
 
 <script>
 	//countUp.js, makes the total_cash span increment up in a nice way
-	var numAnim = new CountUp("total_cash", 0, $("#total_cash").text());
+	var numAnim = new CountUp("total_cash", 0, parseFloat($("#total_cash").text()));
 	if (!numAnim.error) {
 	    numAnim.start();
 	}

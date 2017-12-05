@@ -6,6 +6,7 @@ var flex_payments = [];
 var flex_payments_order = [];
 
 var total_cash = 0;
+var fixed_payment_perc = 0;
 var suggested_amount = 0;
 var m = 0;
 var n = 0;
@@ -48,6 +49,10 @@ function check_parameters(step_id) {
 					if (isNaN(parseFloat($(this).val()))) {
 						alert("Error: Category with incorrect value found.");
 						function_break = true;
+					}
+					else {
+						//get percentage of total cash and store
+						fixed_payment_perc += 100 * parseFloat($(this).val()) / total_cash;
 					}
 				});
 			});

@@ -1,4 +1,6 @@
 class BudgetsController < ApplicationController
+	before_action :authenticate_user!
+
 	def new
 		@budget = Budget.new
 		@rent = Category.new(:name => 'Rent', :fixed => true)

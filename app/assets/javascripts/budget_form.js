@@ -85,11 +85,11 @@ function check_parameters(step_id) {
 
 			sum += suggested_amount;
 			$('#suggested_budget_list').append(
-				'<li>' + 
-					'<span class="slider_name">' + item + '</span>' + 
-					'<span class="slider_info" id="slider_info_' + index.toString() + '"></span>' + 
-					'<span class="slider_info" id="slider_value_' + index.toString() + '"></span><br>' +
+				'<li class="suggested_budget_js">' + 
+					'<span class="slider_name has-text-weight-semibold is-size-6">' + item + '</span>' + 
+					'<span class="slider_info is-pulled-right has-text-primary has-text-weight-semibold is-size-6" id="slider_info_' + index.toString() + '"></span>' + 
 					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="' + suggested_amount + '">' +
+					'<span class="slider_info is-size-6 is-pulled-right bottom_value" id="slider_value_' + index.toString() + '"></span><br>' +
 				'</li>');
 
 			$('#slider_info_' + index.toString()).html($('#slider_' + index.toString()).val());

@@ -87,8 +87,10 @@
     <h1>Suggested Budget</h1>
     </div>
      <p class="has-text-weight-semibold">Here’s a suggested budget, based on your Recurring Bills and Additional Spending. <dfn data-info="We took your current available money and budgeted it for each of your Recurring Bills and Additional Spending, based on the amount it cost and how you prioritized it. Every time you receive more income, we’ll allocate it to each category based on these percentages (unless you decide otherwise for that specific income). When you make a new purchase, we’ll subtract it from the designated category to reflect your ongoing balance and spending history."><i class="fa fa-question-circle has-text-primary"></i></dfn></p>
-    <ul id="suggested_budget_list">
-    </ul>
+     <div class="suggested_budget_container">
+      <ul id="suggested_budget_list">
+      </ul>
+    </div>
     <br>
     <%= form.submit class: 'button is-primary is-pulled-right', onClick:'submit_form()' %>
     <div class="button is-pulled-left" onClick="prev_step('rank_flex_payments')">Back</div>

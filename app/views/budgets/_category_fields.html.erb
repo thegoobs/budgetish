@@ -19,9 +19,11 @@
 	<%= f.hidden_field :percent, value: 0, id: 'hidden_percent' %>
 
 	
+	<div class="column">
+	<%= f.remove_nested_fields_link do%>
+	<i class="fa fa-times has-text-danger" aria-hidden="true"></i>
+	<% end %>
 
-<div class="button is-danger is-small button-remove">
-	<%= f.remove_nested_fields_link "X"%>
-</div>
-	
+
+	</div>
 </div>

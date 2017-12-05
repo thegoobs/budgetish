@@ -88,12 +88,12 @@ function check_parameters(step_id) {
 				'<li class="suggested_budget_js">' + 
 					'<span class="slider_name has-text-weight-semibold is-size-6">' + item + '</span>' + 
 					'<span class="slider_info is-pulled-right has-text-primary has-text-weight-semibold is-size-6" id="slider_info_' + index.toString() + '"></span>' + 
-					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="' + suggested_amount + '">' +
+					'<input class="slider" id="slider_' + index.toString() + '" type="range" min="1" max="100" value="' + suggested_amount + '"></input>' +
 					'<span class="slider_info is-size-6 is-pulled-right bottom_value" id="slider_value_' + index.toString() + '"></span><br>' +
 				'</li>');
 
-			$('#slider_info_' + index.toString()).html($('#slider_' + index.toString()).val());
-			$('#slider_value_' + index.toString()).html(total_cash * $('#slider_' + index.toString()).val()/100);
+			$('#slider_info_' + index.toString()).html('%' + $('#slider_' + index.toString()).val());
+			$('#slider_value_' + index.toString()).html('$' + total_cash * $('#slider_' + index.toString()).val()/100);
 
 			$('.nested_budget_categories').each(function() {
 				if ($(this).find('#input_name').val() == item) {
@@ -102,8 +102,8 @@ function check_parameters(step_id) {
 				}
 			});
 			$('#slider_' + index.toString()).on('input', function() {
-				$('#slider_info_' + index.toString()).html($(this).val());
-				$('#slider_value_' + index.toString()).html(total_cash * $(this).val()/100);
+				$('#slider_info_' + index.toString()).html('%' + $(this).val());
+				$('#slider_value_' + index.toString()).html('$' + total_cash * $(this).val()/100);
 				var temp = $(this).val();
 				var t = this;
 				$('.nested_budget_categories').each(function() {

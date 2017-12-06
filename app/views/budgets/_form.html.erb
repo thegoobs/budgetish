@@ -12,7 +12,7 @@
 
     
     <p class="control has-icons-left">
-  	 <%= form.text_field :starting_cash, id:'starting_cash_field',class: 'input', autocomplete: :off %>
+       <%= form.text_field :starting_cash, id:'starting_cash_field',class: 'input', autocomplete: :off %>
      <span class="icon is-small is-left">
       <i class="fa fa-dollar"></i>
      </span>
@@ -28,7 +28,9 @@
     <p class="has-text-weight-semibold">What do you have to pay for each month? <dfn data-info="These are expenses that you pay each month. Think of things that you actually get a bill for (even if it’s through your email or automatically subtracts from your account). We’ll move on to additional spending in the next step."><i class="fa fa-question-circle has-text-primary"></i></dfn><p>
   
   	<%= form.nested_fields_for :categories do |c| %>
-  		<%= render 'category_fields', :f => c %>
+      <% if c.object.fixed == true || c.object.fixed == nil%>
+    		<%= render 'category_fields', :f => c %>
+      <% end %>
   	<% end %>
 
     <%= form.add_nested_fields_link :categories do %>
@@ -50,7 +52,9 @@
     <p class="has-text-weight-semibold">What else do you spend money on? <dfn data-info="This should include everything else you spend money on, but maybe don’t get an actual bill for. An easy way to think of this is everything you might swipe your card or pull out cash from your wallet for. You can always add new categories later, but the more specific you are the more personalized your budget will be."><i class="fa fa-question-circle has-text-primary"></i></dfn></p>
 
     <%= form.nested_fields_for :categories do |c| %>
-      <%= render 'flex_category_fields', :f => c %>
+      <% if c.object.fixed == false || c.object.fixed == nil %>
+        <%= render 'category_fields', :f => c %>
+      <% end %>
     <% end %>
   </div>
   <div class="field" id="flex_payments_add" onClick="category_clear()">

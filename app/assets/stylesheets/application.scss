@@ -219,8 +219,18 @@ fieldset {
 
 
 .transaction_list {
-	display: none;
+	background: #f6f6f6;
+	
 }
+
+.transaction {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+
 
 /*Pop-Up*/
 dfn {

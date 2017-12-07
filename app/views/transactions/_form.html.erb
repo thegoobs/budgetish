@@ -23,5 +23,6 @@
 		<%= form.select :category_id, current_user.budget.categories.collect {|c| [c.name, c.id]} %>
 	</div>
 	<%= form.submit 'Add to Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
+	<%= form.submit 'Auto Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
 </div>
 <% end %>

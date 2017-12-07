@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
-
 });
 
 //Bulma hide notification
@@ -64,3 +63,4 @@ function transaction_check() {
     $("#transaction_amount").val(amount * -1);
   }
 }
+

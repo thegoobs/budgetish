@@ -46,18 +46,25 @@
 					<ul>
 						<% current_user.budget.categories.each do |list| %>
 							<% if list.fixed == true %>
-								<li class="category">
-									<%= list.name %>
-									<span class="is-pulled-right">
-										<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
-									</span>
-									
+								<li>
+									<div class="category">
+										<%= list.name %>
+										<span class="is-pulled-right">
+											<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
+										</span>
+									</div>
+
+									<ul class="transaction_list">
+										<% current_user.budget.transactions.each do |cat| %>
+											<% if cat.category_id == list.id %>
+												<div class="transaction">
+													<%= cat.name %>
+													<%= cat.amount%>
+												</div>
+											<% end %>
+										<% end %>
+									</ul>
 								</li>
-								<% current_user.budget.transactions.each do |cat| %>
-									<% if cat.category_id == list.id %>
-										<li class="transaction"><%= cat.name %><%= cat.amount%></li>
-									<% end %>
-								<% end %>
 							<% end %>
 						<% end %>
 					</ul>
@@ -67,19 +74,25 @@
 					<ul>
 						<% current_user.budget.categories.order([:order]).each do |list| %>
 							<% if list.fixed == false %>
-								<li class="category">
-									<%= list.name %>
-									<span class="is-pulled-right">
-										<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
-									</span>
+								<li>
+									<div class="category">	
+										<%= list.name %>
+										<span class="is-pulled-right">
+											<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
+										</span>
+									</div>
 									
+									<ul class="transaction_list">
+										<% current_user.budget.transactions.each do |cat| %>
+											<% if cat.category_id == list.id %>
+												<div class="transaction">
+													<%= cat.name %>
+													<%= cat.amount%>
+												</div>
+											<% end %>
+										<% end %>
+									</ul>
 								</li>
-								<% current_user.budget.transactions.each do |cat| %>
-									<% if cat.category_id == list.id %>
-										<li class="transaction"><%= cat.name %><%= cat.amount%>
-										</li>
-									<% end %>
-								<% end %>
 							<% end %>
 						<% end %>
 					</ul>
@@ -104,4 +117,8 @@
 	else {
 	    console.error(numAnim.error);
 	}
+
+	$(".category").on("click", function() {
+	$(this).parent().find(".transaction_list").slideToggle();
+	});
 </script>

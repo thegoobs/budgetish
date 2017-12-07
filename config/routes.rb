@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   get 'pages/dashboard'
   get "transactions/new" => 'transactions#new', :as => :new_transaction
+  patch 'transaction/auto' => 'transactions#auto', :as => :auto
 
 end

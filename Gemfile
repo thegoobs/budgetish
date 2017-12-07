@@ -9,7 +9,6 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'rails', '~> 5.1.4'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'coffee-rails', '~> 4.2'

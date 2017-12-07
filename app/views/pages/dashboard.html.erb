@@ -43,7 +43,7 @@
 				<div class="column">
 					<!-- This is where each spending category goes -->
 					<h1 class="spending-title">Recurring Bills</h1>
-					<ul>
+					<ul id="spending-list">
 						<% current_user.budget.categories.each do |list| %>
 							<% if list.fixed == true %>
 								<li>
@@ -51,6 +51,7 @@
 										<%= list.name %>
 										<span class="is-pulled-right">
 											<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
+											<i class="fa fa-angle-down" style="display: none;"></i>
 										</span>
 									</div>
 
@@ -71,7 +72,7 @@
 
 					<br>
 					<h1 class="spending-title ">Additional Spending</h1>
-					<ul>
+					<ul id="spending-list">
 						<% current_user.budget.categories.order([:order]).each do |list| %>
 							<% if list.fixed == false %>
 								<li>
@@ -79,6 +80,7 @@
 										<%= list.name %>
 										<span class="is-pulled-right">
 											<%= sprintf("$%.2f", list.amount + @transactions.where(:category_id => list.id).sum(:amount)) %>
+											<i class="fa fa-angle-down" style="display: none;"></i>
 										</span>
 									</div>
 									
@@ -87,7 +89,9 @@
 											<% if cat.category_id == list.id %>
 												<div class="transaction">
 													<%= cat.name %>
-													<%= cat.amount%>
+													<span class="is-pulled-right">
+														<%= cat.amount %>
+													</span>
 												</div>
 											<% end %>
 										<% end %>
@@ -121,4 +125,9 @@
 	$(".category").on("click", function() {
 	$(this).parent().find(".transaction_list").slideToggle();
 	});
+
+		$(".transaction").each(function() {
+			$(this).parent().parent().find(".fa-angle-down").css("display", "inline-block");
+		});
+
 </script>

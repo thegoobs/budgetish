@@ -105,6 +105,7 @@ function check_parameters(step_id) {
 					'<li class="column drag-index">' + (index + 1) + '</li>');
 				$('#rank_flex').append(
 					'<li class="drag-block column has-text-centered">' + item + '</li>');
+		
 			});
 
 			Sortable.create(rank_flex, {

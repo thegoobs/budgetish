@@ -181,6 +181,13 @@ fieldset {
 	font-size: 22px;
 }
 
+#rank_flex li:after{
+	content: "\f0dc"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  padding: 5px;
+}
+
 /*Dashboard*/
 .dashboard {
 	margin-top: 50px;

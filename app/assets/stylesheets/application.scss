@@ -67,7 +67,7 @@ label.label {
 }
 
 #blurb1 {
-	background: url("coffee_phone.jpg");
+	background: url("dreds.jpg");
 	background-size: cover;
 	height: 400px;
 
@@ -80,7 +80,7 @@ label.label {
 }
 
 #blurb3 {
-	background: url("happydude.jpg");
+	background: url("coffee_phone.jpg");
 	background-size: cover;
 	height: 400px;
 
@@ -95,6 +95,11 @@ label.label {
 	height: 225px;
 	color: white;
 	padding-top: 40px;
+	margin-bottom: 0px;
+}
+
+.remove-margins {
+	margin: 0px;
 }
 
 /* Button Changes */

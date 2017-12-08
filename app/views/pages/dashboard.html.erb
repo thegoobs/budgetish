@@ -60,9 +60,9 @@
 											<% if cat.category_id == list.id %>
 												<div class="transaction">
 													<%= cat.name %>
-													<div class="is-pulled-right">
+													<span class="is-pulled-right amount">
 													<%= cat.amount%>
-													</div>
+													</span>
 												</div>
 											<% end %>
 										<% end %>
@@ -91,7 +91,7 @@
 											<% if cat.category_id == list.id %>
 												<div class="transaction">
 													<%= cat.name %>
-													<span class="is-pulled-right">
+													<span class="is-pulled-right amount">
 														<%= cat.amount %>
 													</span>
 												</div>
@@ -128,8 +128,17 @@
 	$(this).parent().find(".transaction_list").slideToggle();
 	});
 
-		$(".transaction").each(function() {
-			$(this).parent().parent().find(".fa-angle-down").css("display", "inline-block");
-		});
+	$(".transaction").each(function() {
+		$(this).parent().parent().find(".fa-angle-down").css("display", "inline-block");
+	});
+
+	$(".amount").each(function() {
+		if (parseFloat($(this).html()) < 0) {
+			$(this).addClass("has-text-danger");
+		}
+		else {
+			$(this).addClass("has-text-primary");
+		}
+	})
 
 </script>

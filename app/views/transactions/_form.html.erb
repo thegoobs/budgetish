@@ -22,9 +22,15 @@
 		<%= form.label :category_id, class: 'label' %>
 		<%= form.select :category_id, current_user.budget.categories.collect {|c| [c.name, c.id]} %>
 	</div>
-	<%= form.submit 'Add to Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
+	<div class="columns">
+		<div class="column">
+	<%= form.submit 'Add to Budget', class: 'button is-primary Add-to-category', onClick: 'transaction_check()' %>
 	<% if @subtract == "false" %>
-		<%= form.submit 'Auto Budget', class: 'button is-primary', onClick: 'transaction_check()' %>
+		</div>
+		<div class='column'>
+		<%= form.submit 'Auto Budget', class: 'button is-primary auto-budget-button', onClick: 'transaction_check()' %>
 	<% end %>
+		</div>
+	</div>
 </div>
 <% end %>

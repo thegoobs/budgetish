@@ -1,10 +1,10 @@
 <div class="form_container">
-	<%= render 'form', budget: @budget %>
-	<br>
-	<br>
 	<%= link_to pages_dashboard_path() do %>
-		<div class="button is-danger is-outlined">
-			<span>Discard Changes</span>
+		<div class="button is-danger is-outlined is-pulled-right">
+			<span>Cancel</span>
 		</div>
 	<% end %>
+	<br>
+	<br>
+	<%= render 'form', budget: @budget %>
 </div>

@@ -114,6 +114,13 @@ label.label {
 	font-weight: 700;
 }
 
+.add-to-category {
+	font-family: nunito !important; 
+}
+
+.auto-budget-button {
+	background-color: #67A24B;
+}
 
 /* Form */
 
@@ -239,7 +246,13 @@ fieldset {
 	padding-bottom: 8px;
 }
 
+.ui-widget {
+	font-family: nunito;
+}
 
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+	font-family: nunito;
+}
 
 /*Pop-Up*/
 dfn {

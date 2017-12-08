@@ -148,7 +148,7 @@ function check_parameters(step_id) {
 					'<span class="slider_info is-size-6 is-pulled-right bottom_value" id="slider_value_' + index.toString() + '"></span><br>' +
 				'</li>');
 
-			$('#slider_info_' + index.toString()).html('%' + $('#slider_' + index.toString()).val());
+			$('#slider_info_' + index.toString()).html( $('#slider_' + index.toString()).val() + '%');
 			$('#slider_value_' + index.toString()).html('$' + total_cash * $('#slider_' + index.toString()).val()/100);
 
 			$('.nested_budget_categories').each(function() {

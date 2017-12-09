@@ -61,7 +61,7 @@
 												<div class="transaction">
 													<%= cat.name %>
 													<span class="is-pulled-right amount">
-													<%= cat.amount %>
+													<%= sprintf("%.2f", cat.amount) %>
 													</span>
 												</div>
 											<% end %>
@@ -92,7 +92,7 @@
 												<div class="transaction">
 													<%= cat.name %>
 													<span class="is-pulled-right amount">
-														<%= cat.amount %>
+														<%= sprintf("%.2f", cat.amount) %>
 													</span>
 												</div>
 											<% end %>

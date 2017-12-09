@@ -35,7 +35,7 @@ function check_parameters(step_id) {
 		if (category_was_selected == true) {
 			//check for correct inputs
 			var function_break = false;
-			$('fieldset').each(function() {
+			$("#fixed_payments").find('fieldset').each(function() {
 				$(this).find('#input_name').each(function() {
 					if ($(this).val() == '') {
 						alert("Error: Category with no name found.");
@@ -44,7 +44,7 @@ function check_parameters(step_id) {
 				});
 			});
 
-			$('fieldset').each(function() {
+			$("#fixed_payments").find('fieldset').each(function() {
 				$(this).find('#input_amount').each(function() {
 					if (isNaN(parseFloat($(this).val()))) {
 						alert("Error: Category with incorrect value found.");
@@ -62,7 +62,7 @@ function check_parameters(step_id) {
 			}
 
 			//make sure all flex categories already rendered hide the amount
-			$('fieldset').find("#cat_amount").css("display", "none");
+			$("#flex_payments").find('fieldset').find("#cat_amount").css("display", "none");
 			category_was_selected = false;
 			return true;
 		}
@@ -76,7 +76,7 @@ function check_parameters(step_id) {
 		if (category_was_selected == true) {
 			//check each input for values
 			var function_break = false;
-			$('fieldset').each(function() {
+			$("#flex_payments").find('fieldset').each(function() {
 				$(this).find('#input_name').each(function() {
 					if ($(this).val() == '') {
 						alert("Error: Category with no name found.");
@@ -247,6 +247,23 @@ function next_step(step_id) {
 	// animate_step(step_id, true);
 	if (step_id == "flex_payments") {
 		$('#flex_payments_add').show();
+		if ($("#flex_payments").find("fieldset").val() == undefined) {
+			category_was_selected = false;
+		}
+		else {
+			console.log("they exist!");
+			category_was_selected = true;
+		}
+	}
+
+	if (step_id == "fixed_payments") {
+		if ($("#fixed_payments").find("fieldset").val() == undefined) {
+			category_was_selected = false;
+		}
+		else {
+			console.log("they exist!");
+			category_was_selected = true;
+		}
 	}
 }
 

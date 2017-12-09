@@ -3,17 +3,21 @@
 <section class="hero is-large columns">
   <div class="hero-body hero-picture">
     <div class="column is-half big-title-container">
-      <h1 class="big-title title is-2"> budget(ish). Because no one likes a spreadsheet.</h1>
+      <h1 class="big-title title is-1"> budget(ish)</h1>
+      <p class="subtitle is-3 hero-subtitle">Because no one likes a spreadsheet.</p>
        <%= link_to(new_user_registration_path) do %>
         <div class="button is-primary">
           <span>Create an Account</span>
         </div>
         <br>
         <br>
+
+        <div class="already-have-account">
         <%= link_to(new_user_session_path) do %>
-          <span style="color: white;">Already have an account? Log in.</span>
+          <span>Already have an account? Log in.</span>
         <% end %>
        <% end %>
+     </div>
 
 
   </div>
@@ -21,7 +25,7 @@
   </section>
 
   <div class="columns">
-    <div class="column is-half .is-invisible-tablet .is-invisible-mobile" id="blurb1">
+    <div class="column is-half" id="blurb1">
     </div>
     <div class="column blurb">
         <h2 class="has-text-primary has-text-weight-semibold title is-3">No Money? No Problem.</h2>
@@ -53,7 +57,7 @@
       <p class="is-size-5">Create your free account in minutes. You should be saving money; not spending it.</p>
       <br>
       <div class="button is-secondary"> 
-        <%= link_to('CREATE AN ACCOUNT', new_user_registration_path)%>
+        <%= link_to('Create an Account', new_user_registration_path)%>
       </div>
   </div>
 </div>
@@ -62,7 +66,7 @@
   <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <p> Copyright 2017 Budgetish
+      <p> &copy; 2017 budget(ish)
       </p>
     </div>
   </div>

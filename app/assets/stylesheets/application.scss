@@ -102,6 +102,19 @@ label.label {
 	margin: 0px;
 }
 
+.already-have-account a{
+	color: white;
+}
+
+.already-have-account a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.hero-subtitle {
+	color: white;
+}
+
 /* Button Changes */
 
 .button-remove a {
@@ -121,6 +134,8 @@ label.label {
 .auto-budget-button {
 	background-color: #67A24B;
 }
+
+
 
 /* Form */
 

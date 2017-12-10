@@ -16,7 +16,7 @@
      </span>
     </p>
     <br>
-    <div class="button is-primary is-pulled-right" onClick="next_step('fixed_payments')">Next: Recurring Bills</div>
+    <div class="button is-primary is-pulled-right mobile-button" onClick="next_step('fixed_payments')">Next: Recurring Bills</div>
   </div>
   
   <div class="field" id="fixed_payments">
@@ -39,8 +39,8 @@
     <% end %>
     <br>
     <br>
-    <div class="button is-primary is-pulled-right" onClick="next_step('flex_payments')">Next: Additional Spending</div>
-    <div class="button is-pulled-left" onClick="prev_step('starting_cash')">Back</div>
+    <div class="button is-primary is-pulled-right mobile-button" onClick="next_step('flex_payments')">Next: Additional Spending</div>
+    <div class="button is-pulled-left mobile-button" onClick="prev_step('starting_cash')">Back</div>
     </div>
 
   <div class="field" id="flex_payments" style="margin-bottom: 0">
@@ -65,8 +65,8 @@
 
     <br>
     <br>
-    <div class="button is-primary is-pulled-right" onClick="next_step('rank_flex_payments')">Next: Prioritize Spending Categories</div>
-    <div class="button is-pulled-left" onClick="prev_step('fixed_payments')">Back</div>
+    <div class="button is-primary is-pulled-right mobile-button" onClick="next_step('rank_flex_payments')">Next: Prioritize Spending Categories</div>
+    <div class="button is-pulled-left mobile-button" onClick="prev_step('fixed_payments')">Back</div>
   </div>
 
   <div class="field" id="rank_flex_payments">
@@ -80,8 +80,8 @@
     </div>
 
     <br>
-    <div class="button is-primary is-pulled-right" onClick="next_step('suggested_budget')">Next: Suggested Budget</div>
-    <div class="button is-pulled-left" onClick="prev_step('flex_payments')">Back</div>
+    <div class="button is-primary is-pulled-right mobile-button" onClick="next_step('suggested_budget')">Next: Suggested Budget</div>
+    <div class="button is-pulled-left mobile-button" onClick="prev_step('flex_payments')">Back</div>
   </div>
 
   <div class="field" id="suggested_budget">
@@ -94,7 +94,7 @@
       </ul>
     </div>
     <br>
-    <%= form.submit class: 'button is-primary is-pulled-right', onClick:'submit_form()' %>
-    <div class="button is-pulled-left" onClick="prev_step('rank_flex_payments')">Back</div>
+    <%= form.submit class: 'button is-primary mobile-button is-pulled-right', onClick:'submit_form()' %>
+    <div class="button is-pulled-left mobile-button" onClick="prev_step('rank_flex_payments')">Back</div>
   </div>
 <% end %>

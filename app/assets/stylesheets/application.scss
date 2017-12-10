@@ -68,7 +68,10 @@ p {
 .hero-picture {
 	background: url("hero-girl.jpg");
 	background-size: cover;
+	background-position: right top;
 }
+
+
 
 #blurb1 {
 	background: url("dreds.jpg");
@@ -117,6 +120,21 @@ p {
 
 .hero-subtitle {
 	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	.big-title-container {
+		padding-left: 20px;
+}
+	.call-to-action {
+		padding: 20px;
+		height: 250px;
+		padding-top: 30px;
+}
+	.blurb {
+		padding: 60px;
+	}
+
 }
 
 /* Button Changes */
@@ -220,6 +238,13 @@ fieldset {
   font-family: FontAwesome;
   display: inline-block;
   padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+	.button {
+		margin-top: 50px;
+	}
+
 }
 
 /*Dashboard*/

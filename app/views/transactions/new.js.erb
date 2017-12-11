@@ -1,4 +1,9 @@
+var title = "New Purchase";
+if ($("#transaction_amount").data('sub') == true) {
+	title = "New Income";
+}
 $('#modal-holder').html("<%= escape_javascript(render 'transactions/new') %>");
 $('#modal-holder').dialog({
-	dialogClass: 'popup'
+	dialogClass: 'popup',
+	title: title
 });

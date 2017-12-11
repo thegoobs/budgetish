@@ -158,7 +158,7 @@ function check_parameters(step_id) {
 				}
 			});
 			$('#slider_' + index.toString()).on('input', function() {
-				$('#slider_info_' + index.toString()).html('%' + $(this).val());
+				$('#slider_info_' + index.toString()).html($(this).val() + '%');
 				$('#slider_value_' + index.toString()).html('$' + total_cash * $(this).val()/100);
 				var temp = $(this).val();
 				var t = this;

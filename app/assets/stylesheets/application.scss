@@ -234,11 +234,12 @@ fieldset {
 	font-size: 22px;
 }
 
-#rank_flex li:after{
-	content: "\f0dc"; /* FontAwesome Unicode */
+#rank_flex li:before{
+	content: "\f0c9"; /* FontAwesome Unicode */
   font-family: FontAwesome;
   display: inline-block;
   padding: 5px;
+  color: #dedede;
 }
 
 @media screen and (max-width: 768px) {

@@ -6,13 +6,13 @@ class TransactionsController < ApplicationController
 	end
 
 	def create
-		if params[:commit] == "Add to Budget"
-			flash[:notice] = "transaction added successfully."
+		if params[:commit] == "Add to Category"
+			flash[:notice] = "Transaction added successfully."
 			@budget = current_user.budget
 			@transaction = @budget.transactions.create(transaction_params)
 			redirect_to pages_dashboard_path
 		else
-
+			flash[:notice] = "Auto budget successfully added."
 			@t = []
 			current_user.budget.categories.count.times do |i|
 				@t << Transaction.new

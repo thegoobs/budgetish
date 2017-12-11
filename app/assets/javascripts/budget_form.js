@@ -104,7 +104,7 @@ function check_parameters(step_id) {
 				$('#rank_index').append(
 					'<li class="column drag-index">' + (index + 1) + '</li>');
 				$('#rank_flex').append(
-					'<li class="drag-block column has-text-centered">' + item + '</li>');
+					'<li class="drag-block column">' + item + '</li>');
 		
 			});
 

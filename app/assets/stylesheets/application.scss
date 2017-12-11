@@ -68,7 +68,7 @@ p {
 .hero-picture {
 	background: url("hero-girl.jpg");
 	background-size: cover;
-	background-position: right top;
+	background-position: 60% 25%;
 }
 
 
@@ -85,7 +85,7 @@ p {
 	background: url("happygirl.jpg");
 	background-size: cover;
 	height: 400px;
-	background-position: center;
+	background-position: 50% 25%;
 }
 
 #blurb3 {
@@ -103,9 +103,9 @@ p {
 .call-to-action {
 	background: #99D167;
 	height: 225px;
-	color: white;
 	padding-top: 40px;
 	margin-bottom: 0px;
+	color: white;
 }
 
 .remove-margins {
@@ -130,8 +130,8 @@ p {
 		padding-left: 20px;
 }
 	.call-to-action {
-		padding: 20px;
-		height: 250px;
+		padding: 40px;
+		height: auto;
 		padding-top: 30px;
 }
 	.blurb {
